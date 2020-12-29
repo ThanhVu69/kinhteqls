@@ -56,6 +56,7 @@
                                     <thead>
                                         <tr>
                                             <th style="width: 1000px">Giới thiệu chung</th>
+                                            <th>Giới thiệu Cán bộ giảng viên</th>
                                             <th>Cập nhật ngày</th>
                                             <th></th>
                                         </tr>
@@ -64,6 +65,7 @@
                                     @foreach($bomontrungtam as $hh)
                                         <tr>
                                             <td>{!! $hh->gioithieuchung !!}</td>
+                                            <td>{!! $hh->canbogiangvien !!}</td>
                                             <td>{!! $hh->updated_at !!}</td>
                                             <td><a href="suabomontrungtam/{{$hh->id}}" onclick="return confirm('Bạn có chắc chắn muốn sửa?')" class="btn btn-info btn-sm">Sửa</a></td>
                                         </tr>

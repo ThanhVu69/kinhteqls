@@ -60,6 +60,10 @@
                                         <label>Giới thiệu chung</label>
                                             <textarea name="gioithieuchung" class="form-control ckeditor">{{$bomontrungtam->gioithieuchung}}</textarea>
                                         </div>
+                                        <div class="form-group">
+                                        <label>Giới thiệu cán bộ giảng viên</label>
+                                            <textarea name="canbogiangvien" class="form-control ckeditor">{{$bomontrungtam->canbogiangvien}}</textarea>
+                                        </div>
                                         <input type="submit" name="submit" value="Sửa" class="btn btn-primary">
                                         <a href="{{asset('bomontrungtam')}}" class="btn btn-danger">Hủy bỏ</a>
                                     </div>

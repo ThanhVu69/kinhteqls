@@ -16,39 +16,65 @@ Route::get('/', function () {
 });
 //Trang quản lý
 Route::get('dang-nhap-trang-quan-ly', 'AdminController@getLog');
-Route::get('trang-quan-ly', 'AdminController@homead');
+Route::get('trang-quan-ly', 'AdminController@homead',function(){
+})->middleware('adminLogin');
+//Giới thiệu chung về viện
+Route::get('gioithieu', 'AdminController@gioithieu',function(){
+})->middleware('adminLogin');
+Route::get('suagioithieu/{id}','AdminController@getsuagioithieu',function(){
+})->middleware('adminLogin');
+Route::post('suagioithieu/{id}','AdminController@postsuagioithieu',function(){
+})->middleware('adminLogin');
 //Mô hình đào tạo
-Route::get('mohinhdaotao', 'MohinhdaotaoController@mohinhdaotao');
-Route::get('suamohinhdaotao/{id}','MohinhdaotaoController@getsuamohinhdaotao');
-Route::post('suamohinhdaotao/{id}','MohinhdaotaoController@postsuamohinhdaotao');
+Route::get('mohinhdaotao', 'MohinhdaotaoController@mohinhdaotao',function(){
+})->middleware('adminLogin');
+Route::get('suamohinhdaotao/{id}','MohinhdaotaoController@getsuamohinhdaotao',function(){
+})->middleware('adminLogin');
+Route::post('suamohinhdaotao/{id}','MohinhdaotaoController@postsuamohinhdaotao',function(){
+})->middleware('adminLogin');
 Route::get('mo-hinh-dao-tao','MohinhdaotaoController@mohinhdaotaoindex');
 //Đào tạo đại học
-Route::get('gioithieuchung', 'DaotaodaihocController@gioithieuchung');
-Route::get('suagioithieuchung/{id}','DaotaodaihocController@getsuagioithieuchung');
-Route::post('suagioithieuchung/{id}','DaotaodaihocController@postsuagioithieuchung');
+Route::get('gioithieuchung', 'DaotaodaihocController@gioithieuchung',function(){
+})->middleware('adminLogin');
+Route::get('suagioithieuchung/{id}','DaotaodaihocController@getsuagioithieuchung',function(){
+})->middleware('adminLogin');
+Route::post('suagioithieuchung/{id}','DaotaodaihocController@postsuagioithieuchung',function(){
+})->middleware('adminLogin');
 Route::get('gioi-thieu-chung1', 'DaotaodaihocController@gioithieuchungindex');
 //Chương trình đào tạo 
-Route::get('chuongtrinhdaotao','ChuongtrinhdaotaoController@chuongtrinhdaotao');
-Route::get('themchuongtrinhdaotao','ChuongtrinhdaotaoController@getthemchuongtrinhdaotao');
-Route::post('themchuongtrinhdaotao','ChuongtrinhdaotaoController@postthemchuongtrinhdaotao');
-Route::get('suachuongtrinhdaotao/{id}','ChuongtrinhdaotaoController@getsuachuongtrinhdaotao');
-Route::post('suachuongtrinhdaotao/{id}','ChuongtrinhdaotaoController@postsuachuongtrinhdaotao');
-Route::get('xoachuongtrinhdaotao/{id}','ChuongtrinhdaotaoController@getxoachuongtrinhdaotao');
+Route::get('chuongtrinhdaotao','ChuongtrinhdaotaoController@chuongtrinhdaotao',function(){
+})->middleware('adminLogin');
+Route::get('themchuongtrinhdaotao','ChuongtrinhdaotaoController@getthemchuongtrinhdaotao',function(){
+})->middleware('adminLogin');
+Route::post('themchuongtrinhdaotao','ChuongtrinhdaotaoController@postthemchuongtrinhdaotao',function(){
+})->middleware('adminLogin');
+Route::get('suachuongtrinhdaotao/{id}','ChuongtrinhdaotaoController@getsuachuongtrinhdaotao',function(){
+})->middleware('adminLogin');
+Route::post('suachuongtrinhdaotao/{id}','ChuongtrinhdaotaoController@postsuachuongtrinhdaotao',function(){
+})->middleware('adminLogin');
+Route::get('xoachuongtrinhdaotao/{id}','ChuongtrinhdaotaoController@getxoachuongtrinhdaotao',function(){
+})->middleware('adminLogin');
 //Chương trình đào tạo chi tiết
 Route::get('chuan-dau-ra/{id}','ChuongtrinhdaotaoController@chuandaura');
 Route::get('quy-dinh-dao-tao/{id}','ChuongtrinhdaotaoController@quydinhdaotao');
 //Đào tạo sau đại học
-Route::get('daotaosaudh', 'DaotaosaudhController@daotaosaudh');
-Route::get('suadaotaosaudh/{id}','DaotaosaudhController@getsuadaotaosaudh');
-Route::post('suadaotaosaudh/{id}','DaotaosaudhController@postsuadaotaosaudh');
+Route::get('daotaosaudh', 'DaotaosaudhController@daotaosaudh',function(){
+})->middleware('adminLogin');
+Route::get('suadaotaosaudh/{id}','DaotaosaudhController@getsuadaotaosaudh',function(){
+})->middleware('adminLogin');
+Route::post('suadaotaosaudh/{id}','DaotaosaudhController@postsuadaotaosaudh',function(){
+})->middleware('adminLogin');
 Route::get('dao-tao-sau-dai-hoc', 'DaotaosaudhController@daotaosaudhindex');
 Route::get('danh-sach-luan-van', 'DaotaosaudhController@danhsachluanvan');
 Route::get('danh-sach-nghien-cuu-sinh', 'DaotaosaudhController@danhsachnghiencuusinh');
 Route::get('danh-sach-tap-chi', 'DaotaosaudhController@danhsachtapchi');
 //Đào tạo thạc sỹ
-Route::get('daotaothacsy', 'DaotaosaudhController@daotaothacsy');
-Route::get('suadaotaothacsy/{id}','DaotaosaudhController@getsuadaotaothacsy');
-Route::post('suadaotaothacsy/{id}','DaotaosaudhController@postsuadaotaothacsy');
+Route::get('daotaothacsy', 'DaotaosaudhController@daotaothacsy',function(){
+})->middleware('adminLogin');
+Route::get('suadaotaothacsy/{id}','DaotaosaudhController@getsuadaotaothacsy',function(){
+})->middleware('adminLogin');
+Route::post('suadaotaothacsy/{id}','DaotaosaudhController@postsuadaotaothacsy',function(){
+})->middleware('adminLogin');
 Route::get('dao-tao-thac-sy', 'DaotaosaudhController@daotaothacsyindex');
 Route::get('chuan-dau-ra', 'DaotaosaudhController@chuandaura');
 Route::get('doi-tuong', 'DaotaosaudhController@doituong');
@@ -57,19 +83,73 @@ Route::get('chuong-trinh-chuyen-doi', 'DaotaosaudhController@chuongtrinhchuyendo
 Route::get('danh-muc-hoc-phan', 'DaotaosaudhController@danhmuchocphan');
 Route::get('danh-sach-giang-vien', 'DaotaosaudhController@danhsachgiangvien');
 //Đào tạo tiến sỹ
-Route::get('daotaotiensy', 'DaotaosaudhController@daotaotiensy');
-Route::get('suadaotaotiensy/{id}','DaotaosaudhController@getsuadaotaotiensy');
-Route::post('suadaotaotiensy/{id}','DaotaosaudhController@postsuadaotaotiensy');
+Route::get('daotaotiensy', 'DaotaosaudhController@daotaotiensy',function(){
+})->middleware('adminLogin');
+Route::get('suadaotaotiensy/{id}','DaotaosaudhController@getsuadaotaotiensy',function(){
+})->middleware('adminLogin');
+Route::post('suadaotaotiensy/{id}','DaotaosaudhController@postsuadaotaotiensy',function(){
+})->middleware('adminLogin');
 Route::get('dao-tao-tien-sy', 'DaotaosaudhController@daotaotiensyindex');
 Route::get('kinh-te-hoc', 'DaotaosaudhController@kinhtehoc');
 Route::get('dau-ra-kinh-te-hoc', 'DaotaosaudhController@daurakinhtehoc');
 Route::get('quan-ly-cong-nghiep', 'DaotaosaudhController@quanlycongnghiep');
 Route::get('dau-ra-quan-ly-cong-nghiep', 'DaotaosaudhController@dauraquanlycongnghiep');
 //Bộ môn - Trung tâm
-Route::get('bomontrungtam', 'BomonController@bomontrungtam');
-Route::get('suabomontrungtam/{id}','BomonController@getsuabomontrungtam');
-Route::post('suabomontrungtam/{id}','BomonController@postsuabomontrungtam');
+Route::get('bomontrungtam', 'BomonController@bomontrungtam',function(){
+})->middleware('adminLogin');
+Route::get('suabomontrungtam/{id}','BomonController@getsuabomontrungtam',function(){
+})->middleware('adminLogin');
+Route::post('suabomontrungtam/{id}','BomonController@postsuabomontrungtam',function(){
+})->middleware('adminLogin');
 Route::get('bo-mon-trung-tam', 'BomonController@bomontrungtamindex');
+//Chi tiết bộ môn
+Route::get('bomon','BomonController@bomon',function(){
+})->middleware('adminLogin');
+Route::get('thembomon','BomonController@getthembomon',function(){
+})->middleware('adminLogin');
+Route::post('thembomon','BomonController@postthembomon',function(){
+})->middleware('adminLogin');
+Route::get('suabomon/{id}','BomonController@getsuabomon',function(){
+})->middleware('adminLogin');
+Route::post('suabomon/{id}','BomonController@postsuabomon',function(){
+})->middleware('adminLogin');
+Route::get('xoabomon/{id}','BomonController@getxoabomon',function(){
+})->middleware('adminLogin');
+//Danh mục chi tiết bộ môn
+Route::get('gioi-thieu-chung4/{id}','BomonController@gioithieuchung4');
+Route::get('huong-nghien-cuu/{id}','BomonController@huongnghiencuu');
+Route::get('cong-trinh-khoa-hoc/{id}','BomonController@congtrinhkhoahoc');
+Route::get('hoc-phan-dam-nhan/{id}','BomonController@hocphandamnhan');
+Route::get('co-so-vat-chat/{id}','BomonController@cosovatchat');
+Route::get('sach-da-xuat-ban/{id}','BomonController@sachdaxuatban');
+Route::get('can-bo-giang-vien/{id}','GiangvienController@canbogiangvien');
+//Giảng viên
+Route::get('giangvien','GiangvienController@giangvien',function(){
+})->middleware('adminLogin');
+Route::get('themgiangvien','GiangvienController@getthemgiangvien',function(){
+})->middleware('adminLogin');
+Route::post('themgiangvien','GiangvienController@postthemgiangvien',function(){
+})->middleware('adminLogin');
+Route::get('suagiangvien/{id}','GiangvienController@getsuagiangvien',function(){
+})->middleware('adminLogin');
+Route::post('suagiangvien/{id}','GiangvienController@postsuagiangvien',function(){
+})->middleware('adminLogin');
+Route::get('xoagiangvien/{id}','GiangvienController@getxoagiangvien',function(){
+})->middleware('adminLogin');
+Route::get('chi-tiet-giang-vien/{id}','GiangvienController@chitietgiangvien');
+//Slide
+Route::get('slide','SlideController@slide',function(){
+})->middleware('adminLogin');
+Route::get('themslide','SlideController@getthemslide',function(){
+})->middleware('adminLogin');
+Route::post('themslide','SlideController@postthemslide',function(){
+})->middleware('adminLogin');
+Route::get('suaslide/{id}','SlideController@getsuaslide',function(){
+})->middleware('adminLogin');
+Route::post('suaslide/{id}','SlideController@postsuaslide',function(){
+})->middleware('adminLogin');
+Route::get('xoaslide/{id}','SlideController@getxoaslide',function(){
+})->middleware('adminLogin');
 //Trang chủ
 Route::get('trang-chu', 'AdminController@trangchu');
 Route::post('/login', 'AdminController@login');

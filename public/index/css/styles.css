@@ -9994,7 +9994,7 @@ p {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 0.5rem 0;
 }
 .page-section h2.section-heading {
   font-size: 1.5rem;
@@ -10084,7 +10084,7 @@ img::-moz-selection {
   letter-spacing: 0.000025em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ffc800;
+  color: #ffffff;
 }
 
 @media (min-width: 992px) {
@@ -10123,15 +10123,16 @@ img::-moz-selection {
   }
 }
 header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/slide.png");
+  /* background-image: url("../assets/img/slide.png"); */
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -10148,10 +10149,10 @@ header.masthead .masthead-heading {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
+    padding-top: 3rem;
+    padding-bottom: 0;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -10422,9 +10423,9 @@ header.masthead .masthead-heading {
   text-align: center;
 }
 .team-member img {
-  width: 14rem;
-  height: 14rem;
-  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  width: 8rem;
+  height: 8rem;
+  border: 0.5rem solid #ffffff;
 }
 .team-member h4 {
   margin-top: 1.5rem;

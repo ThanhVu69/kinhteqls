@@ -45,37 +45,52 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                               Bộ môn - Trung tâm
+                                Bộ môn - Trung tâm
                             </h2>
                             <br>
                             <a class="btn btn-primary" href="{{asset('trang-quan-ly')}}" role="button">Bảng điều khiển</a>
                         </div>
                         <div class="body">
+                        <a href="thembomon" class="btn btn-info">Thêm Bộ môn - Trung tâm</a><br><br>
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
-                                        <tr>
+                                        <tr >
+                                            <th>Ảnh nền</th>
+                                            <th>Tên bộ môn</th>
                                             <th>Giới thiệu chung</th>
-                                            <th>Các hướng nghiên cứu</th>
-                                            <th>Các công trình khoa học</th>
-                                            <th>Các học phần đảm nhận</th>
-                                            <th>Cơ sở vật chất</th>
+                                            <th>Hướng nghiên cứu</th>
+                                            <th>Công trình khoa học</th>
                                             <th>Sách đã xuất bản</th>
+                                            <th>Học phần đảm nhận</th>
+                                            <th>Cơ sở vật chất</th>
                                             <th>Cập nhật ngày</th>
+                                            <th></th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($bomon as $hh)
                                         <tr>
-                                            <td>{!! $hh->gioithieuchung !!}</td>
-                                            <td>{!! $hh->huongnghiencuu !!}</td>
-                                            <td>{!! $hh->congtrinhkhoahoc !!}.</td>
-                                            <td>{!! $hh->sachdaxuatban !!}</td>
-                                            <td>{!! $hh->hocphandamnhan !!}</td>
-                                            <td>{!! $hh->cosovatchat !!}</td>
+                                            <td><img style="width: auto; height:50px;" src="upload/bomon/{{$hh->anh}}" /></td>
+                                            <td>{!! $hh->tenbomon !!}</td>
+                                            <td>{!! substr($hh->gioithieuchung,0,500) !!}</td>
+                                            <td>{!! substr($hh->huongnghiencuu,0,500) !!}</td>
+                                            <td>{!! substr($hh->congtrinhkhoahoc,0,10) !!}</td>
+                                            <td>{!! substr($hh->sachdaxuatban,0,10) !!}</td>
+                                            <td>{!! substr($hh->hocphandamnhan,0,10) !!}</td>
+                                            <td>{!! substr($hh->cosovatchat,0,10) !!}</td>
                                             <td>{!! $hh->updated_at !!}</td>
-                                            <td><a href="suabomon/{{$hh->id}}" onclick="return confirm('Bạn có chắc chắn muốn sửa?')" class="btn btn-info btn-sm">Sửa</a></td>
+                                            <td>
+                                            <a href="suabomon/{{$hh->id}}" 
+                                            onclick="return confirm('Bạn có chắc chắn muốn sửa?')" 
+                                            class="btn btn-info btn-sm">Sửa</a>
+                                            </td>
+                                            <td>
+                                            <a href="xoabomon/{{$hh->id}}" 
+                                            onclick="return confirm('Bạn có chắc chắn muốn xóa?')" 
+                                            class="btn btn-danger btn-sm">Xóa</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>

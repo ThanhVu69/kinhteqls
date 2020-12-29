@@ -12,7 +12,12 @@ use Alert;
 use RealRashid\SweetAlert\Facades\Aler;
 use App\User;
 use App\mohinhdaotaos;
+use App\bomons;
+use App\lienhes;
+use Illuminate\Support\Str;
 use App\chuongtrinhdaotaos;
+use App\slides;
+use App\bomontrungtams;
 use Illuminate\Http\Request;
 
 
@@ -56,12 +61,56 @@ class AdminController extends Controller
 //Trang chủ
     public function trangchu()
     {
+        $gioithieu = lienhes::all();
+        $slide = slides::all();
+        $canbo = bomontrungtams::all();
+        $bomon = bomons::all();
         $chuongtrinhdaotao= chuongtrinhdaotaos::all();
-        return view('frontend.index',compact('chuongtrinhdaotao'));
+        return view('frontend.index',compact('chuongtrinhdaotao','bomon','canbo','slide','gioithieu'));
     }
 //Trang admin
     public function homead()
     {
         return view('backend.layout');
+    }
+//Giới thiệu chung về viện
+    public function gioithieu()
+    {
+        $gioithieu= lienhes::all();
+        return view('backend.gioithieu.gioithieu',['gioithieu'=>$gioithieu]);
+    }
+    //Sửa Giảng viên
+    public function getsuagioithieu($id)
+    {
+        $gioithieu= lienhes::find($id);
+        return view('backend.gioithieu.suagioithieu',compact('gioithieu'));
+    }
+    public function postsuagioithieu(Request $request,$id)
+    {    
+    $gioithieu= lienhes::find($id);
+    $validator = Validator::make($request->all(),[
+        'thungo'=>'required|min:1',
+        'lichsu'=>'required|min:1',
+        'cocau'=>'required|min:1',
+        'canbo'=>'required|min:1',
+        'cosovatchat'=>'required|min:1',
+        'thongtin'=>'required|min:1',
+        ]);
+    if($validator->fails())
+    {
+        alert()->error('Lỗi rồi!', 'Xin hãy điền đầy đủ thông tin!');
+    }
+    else{
+        $gioithieu->thungo = $request->thungo;
+        $gioithieu->lichsu = $request->lichsu;
+        $gioithieu->cocau = $request->cocau;
+        $gioithieu->canbo = $request->canbo;
+        $gioithieu->cosovatchat = $request->cosovatchat;
+        $gioithieu->thongtin = $request->thongtin;
+        $gioithieu->save();
+        alert()->success('Thành công', 'Đã sửa!');
+        
+    }
+    return view('backend.gioithieu.suagioithieu',['gioithieu'=>$gioithieu]);
     }
 }

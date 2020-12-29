@@ -12,6 +12,7 @@ use Alert;
 use RealRashid\SweetAlert\Facades\Aler;
 use App\User;
 use App\mohinhdaotaos;
+use App\slides;
 use Illuminate\Http\Request;
 
 
@@ -50,7 +51,8 @@ class MohinhdaotaoController extends Controller
     }
 //Mô hình đào tạo 
     public function mohinhdaotaoindex() {
+        $slide = slides::all();
         $mohinh = mohinhdaotaos::all();
-        return view('frontend.mohinhdaotao',['mohinh'=>$mohinh]);
+        return view('frontend.mohinhdaotao',['mohinh'=>$mohinh,'slide'=>$slide]);
     }
 }

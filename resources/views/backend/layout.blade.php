@@ -326,11 +326,11 @@
                                 </li>
                                 <li>
                                     BỘ MÔN - TRUNG TÂM
-                                    <span class="pull-right"><a style="color: #ffffff;" href="#"><b>Chi tiết</b></a></span>
+                                    <span class="pull-right"><a style="color: #ffffff;" href="{{asset('bomon')}}"><b>Chi tiết</b></a></span>
                                 </li>
                                 <li>
                                     CÁN BỘ GIẢNG VIÊN
-                                    <span class="pull-right"><a style="color: #ffffff;" href="#"><b>Chi tiết</b></a></span>
+                                    <span class="pull-right"><a style="color: #ffffff;" href="{{asset('giangvien')}}"><b>Chi tiết</b></a></span>
                                 </li>
                             </ul>
                         </div>
@@ -341,19 +341,15 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="card">
                         <div class="body bg-cyan">
-                            <div class="m-b--35 font-bold">LATEST SOCIAL TRENDS</div>
+                            <div class="m-b--35 font-bold"><h3>Giao diện trang chủ</h3></div>
                             <ul class="dashboard-stat-list">
                                 <li>
-                                    #socialtrends
-                                    <span class="pull-right">
-                                        <i class="material-icons">trending_up</i>
-                                    </span>
+                                    SLIDE TRANG WEB
+                                    <span class="pull-right"><a style="color: #ffffff;" href="{{asset('slide')}}"><b>Chi tiết</b></a></span>
                                 </li>
                                 <li>
-                                    #materialdesign
-                                    <span class="pull-right">
-                                        <i class="material-icons">trending_up</i>
-                                    </span>
+                                    GIỚI THIỆU CHUNG VỀ VIỆN
+                                    <span class="pull-right"><a style="color: #ffffff;" href="{{asset('gioithieu')}}"><b>Chi tiết</b></a></span>
                                 </li>
                                 <li>#adminbsb</li>
                                 <li>#freeadmintemplate</li>
