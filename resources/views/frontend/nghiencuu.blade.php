@@ -24,7 +24,7 @@
                         <div class="card_content">
                             <h2 class="card_title" style="color: #000">Sản phẩm nghiên cứu</h2>
                             <!-- <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p> -->
-                            <a style="color: #000" href="#">Chi tiết</a>
+                            <a style="color: #be0f0f;" href="#">Chi tiết</a>
                         </div>
                     </div>
                 </li>
@@ -34,7 +34,7 @@
                         <div class="card_content">
                             <h2 class="card_title" style="color: #000">Lĩnh vực nghiên cứu</h2>
                             <!-- <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p> -->
-                            <a style="color: #000" href="#">Chi tiết</a>
+                            <a style="color: #be0f0f" href="#">Chi tiết</a>
                         </div>
                     </div>
                 </li>
@@ -44,7 +44,7 @@
                         <div class="card_content">
                             <h2 class="card_title" style="color: #000">Đề tài nghiên cứu</h2>
                             <!-- <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p> -->
-                            <a style="color: #000" href="#">Chi tiết</a>
+                            <a style="color: #be0f0f" href="#">Chi tiết</a>
                         </div>
                     </div>
                 </li>

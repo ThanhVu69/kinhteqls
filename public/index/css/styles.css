@@ -361,7 +361,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Arial!important;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -10011,7 +10011,7 @@ p {
 
 @media (min-width: 768px) {
   section {
-    padding: 9rem 0;
+    padding: 2rem 0;
   }
 }
 ::-moz-selection {
@@ -10038,7 +10038,7 @@ img::-moz-selection {
 
 .btn-xl {
   padding: 1.25rem 2.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:  Arial;
   font-size: 1.125rem;
   font-weight: 700;
 }
@@ -10078,10 +10078,10 @@ img::-moz-selection {
   height: 1.5rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Calibri!important;
   font-size: 0.7rem;
   color: rgb(255, 255, 255);
-  letter-spacing: 0.000025em;
+  letter-spacing: 0.0025em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ffffff;
@@ -10089,8 +10089,8 @@ img::-moz-selection {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
     border: none;
     background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;

@@ -89,9 +89,9 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#bomon">Bộ môn - Trung tâm</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sinhvien">Học viên -Sinh viên</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Tin tức - Sự kiện</a>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tintuc">Tin tức - Sự kiện</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Tài liệu</a>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tailieu">Tài liệu</a>
                     </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Thư viện số</a>
                     </li>
@@ -131,7 +131,7 @@
                                 src="{{asset('/index/assets/img/bk5.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center"><b>Thư ngỏ</b></div>
+                            <div class="portfolio-caption-heading" style="text-align:center">Thư ngỏ</div>
                         </div>
                     </div>
                 </div>
@@ -142,9 +142,9 @@
                                 src="{{asset('/index/assets/img/bk10.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center"><b>Lịch sử hình thành và
+                            <div class="portfolio-caption-heading" style="text-align:center">Lịch sử hình thành và
                                     phát
-                                    triển</b></div>
+                                    triển</div>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                                 src="{{asset('/index/assets/img/bk11.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center"><b>Cơ cấu tổ chức</b></div>
+                            <div class="portfolio-caption-heading" style="text-align:center">Cơ cấu tổ chức</div>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                                 src="{{asset('/index/assets/img/bk12.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center"><b>Cán bộ và giảng viên</b>
+                            <div class="portfolio-caption-heading" style="text-align:center">Cán bộ và giảng viên
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                                 src="{{asset('/index/assets/img/bk13.png')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center"><b>Cơ sở vật chất</b></div>
+                            <div class="portfolio-caption-heading" style="text-align:center">Cơ sở vật chất</div>
                         </div>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                                 src="{{asset('/index/assets/img/bk7.jpeg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center"><b>Thông tin liên hệ</b>
+                            <div class="portfolio-caption-heading" style="text-align:center">Thông tin liên hệ
                             </div>
                         </div>
                     </div>
@@ -275,9 +275,7 @@
                                     @foreach($gioithieu as $gt)
                                     {!! $gt->cocau !!}
                                     @endforeach
-
                                 </div>
-
                             </div>
                             <button class="btn btn-primary" data-dismiss="modal" type="button">
                                 <i class="fas fa-times mr-1"></i>
@@ -391,7 +389,7 @@
                     bộ phục vụ giảng dạy,
                     là những người hết lòng với công việc và có chuyên môn vững vàng trong các lĩnh vực tài chính,
                     kinh tế năng lượng, kinh tế học, kế toán, quản trị sản xuất và marketing.<br><br>
-                    <span><a href="{{asset('bo-mon-trung-tam')}}" style="color: black;">Xem chi tiết</a>
+                    <span><a href="{{asset('bo-mon-trung-tam')}}" style="color: #be0f0f;">Xem chi tiết</a>
                 </h3></span>
             </div>
 
@@ -511,6 +509,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Tin tức -->
+    @include('frontend.tintuc')
+
+     <!-- Tài liệu -->
+     @include('frontend.tailieu')
+
     @if(Auth::check())
     <section class="page-section bg-light" id="dangxuat">
         <div class="container">

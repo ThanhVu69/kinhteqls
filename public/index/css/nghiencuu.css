@@ -94,8 +94,10 @@ body {
 
 .card_title {
   color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-family:  Arial!important;
+  font-size: 14px;
+  /* font-size: 1.1rem; */
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0px;
