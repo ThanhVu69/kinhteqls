@@ -61,7 +61,7 @@ class SlideController extends Controller
         }
         return view('backend.slide.themslide',compact('slide'));
     } 
-    //Xóa bộ môn
+    //Xóa Slide
     public function getxoaslide($id)
     {
         $slide = slides::find($id);

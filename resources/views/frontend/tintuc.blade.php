@@ -3,103 +3,72 @@
     <br><br>
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Tin tức</h2>
+            <h2 class="section-heading text-uppercase">Tin tức - Sự kiện</h2>
         </div>
-        <div class="carousel">
-            <input type="radio" name="slides" checked="checked" id="slide-1">
-            <input type="radio" name="slides" id="slide-2">
-            <input type="radio" name="slides" id="slide-3">
-            <input type="radio" name="slides" id="slide-4">
-            <input type="radio" name="slides" id="slide-5">
-            <input type="radio" name="slides" id="slide-6">
-            <ul class="carousel__slides">
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1041/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Tim Marshall</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1043/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Christian Joudrey</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1044/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Steve Carter</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1045/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Aleksandra Boguslawska</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1049/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Rosan Harmens</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1052/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Annie Spratt</span>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-            <ul class="carousel__thumbnails">
-                <li>
-                    <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
-                </li>
-            </ul>
+        <div class="c-container">
+            <div class="c">
+                <div class="c-img"></div>
+                <a href="" class="c-link">
+                    <div class="c-img-hovered" style="background-image:url('https://source.unsplash.com/Qm_n6aoYzDs')">
+                    </div>
+                </a>
+                <div class="c-info">
+                    <div class="c-about">
+                        <a class="c-tag tag-news">News</a>
+                        <div class="c-time">6/07/2018</div>
+                    </div>
+                    <h1 class="c-title">Samsung laptops is exploding again</h1>
+                    <div class="c-creator">by <a href="">Tyler Platt</a></div>
+                </div>
+            </div>
+            <div class="c">
+                <div class="c-img"></div>
+                <a href="" class="c-link">
+                    <div class="c-img-hovered" style="background-image:url('https://source.unsplash.com/Qm_n6aoYzDs')">
+                    </div>
+                </a>
+                <div class="c-info">
+                    <div class="c-about">
+                        <a class="c-tag tag-news">News</a>
+                        <div class="c-time">6/07/2018</div>
+                    </div>
+                    <h1 class="c-title">Samsung laptops is exploding again</h1>
+                    <div class="c-creator">by <a href="">Tyler Platt</a></div>
+                </div>
+            </div>
+            <div class="c">
+                <div class="c-img"></div>
+                <a href="" class="c-link">
+                    <div class="c-img-hovered" style="background-image:url('https://source.unsplash.com/Qm_n6aoYzDs')">
+                    </div>
+                </a>
+                <div class="c-info">
+                    <div class="c-about">
+                        <a class="c-tag tag-events">Events</a>
+                        <div class="c-time">5/27/2018</div>
+                    </div>
+                    <h1 class="c-title">Apple is having big Sale for the first time</h1>
+                    <div class="c-creator">by <a href="">Timur Mirzoyev</a></div>
+                </div>
+            </div>
+            <div class="c">
+                <div class="c-img"></div>
+                <a href="" class="c-link">
+                    <div class="c-img-hovered" style="background-image:url('https://source.unsplash.com/Qm_n6aoYzDs')">
+                    </div>
+                </a>
+                <div class="c-info">
+                    <div class="c-about">
+                        <a class="c-tag tag-events">Events</a>
+                        <div class="c-time">5/20/2018</div>
+                    </div>
+                    <h1 class="c-title">Net-Nutrality is coming to its end</h1>
+                    <div class="c-creator">by <a href="">Gregoy Trem</a></div>
+                </div>
+            </div>
         </div>
+        <br>
+        <div style="text-align:center"><a href="#">Xem thêm</a></div>
     </div>
+    <br>
 </section>

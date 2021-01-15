@@ -66,7 +66,11 @@ class AdminController extends Controller
         $canbo = bomontrungtams::all();
         $bomon = bomons::all();
         $chuongtrinhdaotao= chuongtrinhdaotaos::all();
-        return view('frontend.index',compact('chuongtrinhdaotao','bomon','canbo','slide','gioithieu'));
+
+        $tintuc = DB::table('tintucs')->where('loai','=','0')->orderBy('ngay','desc')->limit(2)->get();
+        $sukien = DB::table('tintucs')->where('loai','=','1')->orderBy('ngay','desc')->limit(2)->get();
+
+        return view('frontend.index',compact('chuongtrinhdaotao','bomon','canbo','slide','gioithieu','tintuc','sukien'));
     }
 //Trang admin
     public function homead()
@@ -112,5 +116,34 @@ class AdminController extends Controller
         
     }
     return view('backend.gioithieu.suagioithieu',['gioithieu'=>$gioithieu]);
+    }
+
+    // Bộ sưu tập
+    public function bstweb(){
+        $bosuutap = DB::table('bosuutaps')->get();    
+        return view('frontend.bosuutap',compact('bosuutap'));
+    }
+    public function xembstloai($url){
+        $id = DB::table('loaibosuutaps')->select('id')->where('url',$url)->first();
+        $i = $id->id;
+        $bosuutap = DB::table('bosuutaps')->where('id_loaibosuutap',$i)->get();
+        $loai = DB::table('loaibosuutaps')->where('id',$i)->first();
+        return view('frontend.bosuutap',compact('loai','bosuutap'));
+    }
+    // tin tức
+    public function tintuc(){
+        $tintuc = DB::table('tintucs')->where('loai','=',0)->paginate(6);
+        return view('frontend.tintuc.xem',compact('tintuc'));
+    }
+
+    // sự kiện
+    public function sukien(){
+        $sukien = DB::table('tintucs')->where('loai','=',1)->paginate(6);
+        return view('frontend.tintuc.xem',compact('sukien'));
+    }
+    // chi tiết tin tức sự kiện
+    public function chitiettintucsukien($url){
+        $chitiettt = DB::table('tintucs')->where('url',$url)->first();
+        return view('frontend.tintuc.chitiet',compact('chitiettt'));
     }
 }

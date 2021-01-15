@@ -154,3 +154,40 @@ Route::get('xoaslide/{id}','SlideController@getxoaslide',function(){
 Route::get('trang-chu', 'AdminController@trangchu');
 Route::post('/login', 'AdminController@login');
 Route::get('/logout', 'AdminController@logout');
+
+//Tin tức
+Route::group(['prefix' => 'tintuc'], function() {
+    Route::get('danhsach',['as'=>'admin.tintuc.list','uses'=>'TintucController@getList']);
+    Route::get('them',['as'=>'admin.tintuc.getAdd','uses'=>'TintucController@getAdd']);
+    Route::post('them',['as'=>'admin.tintuc.postAdd','uses'=>'TintucController@postAdd']);
+    Route::get('xoa/{id}',['as'=>'admin.tintuc.getDelete','uses'=>'TintucController@getDelete']);
+    Route::get('sua/{id}',['as'=>'admin.tintuc.getEdit','uses'=>'TintucController@getEdit']);
+    Route::post('sua/{id}',['as'=>'admin.tintuc.postEdit','uses'=>'TintucController@postEdit']);
+});
+//Bộ sưu tập
+Route::group(['prefix' => 'bosuutap'], function() {
+    Route::get('danhsach/{id}',['as'=>'admin.bosuutap.loai','uses'=>'BosuutapController@loai']);
+    Route::get('danhsach',['as'=>'admin.bosuutap.list','uses'=>'BosuutapController@getList']);
+    Route::get('them',['as'=>'admin.bosuutap.getAdd','uses'=>'BosuutapController@getAdd']);
+    Route::post('them',['as'=>'admin.bosuutap.postAdd','uses'=>'BosuutapController@postAdd']);
+    Route::get('xoa/{id}',['as'=>'admin.bosuutap.getDelete','uses'=>'BosuutapController@getDelete']);
+});
+
+//Loại bộ sưu tập
+Route::group(['prefix' => 'loaibosuutap'], function() {
+    Route::get('danhsach',['as'=>'admin.loaibosuutap.list','uses'=>'LoaibosuutapController@getList']);
+    Route::get('them',['as'=>'admin.loaibosuutap.getAdd','uses'=>'LoaibosuutapController@getAdd']);
+    Route::post('them',['as'=>'admin.loaibosuutap.postAdd','uses'=>'LoaibosuutapController@postAdd']);
+    Route::get('xoa/{id}',['as'=>'admin.loaibosuutap.getDelete','uses'=>'LoaibosuutapController@getDelete']);
+    Route::get('sua/{id}',['as'=>'admin.loaibosuutap.getEdit','uses'=>'LoaibosuutapController@getEdit']);
+    Route::post('sua/{id}',['as'=>'admin.loaibosuutap.postEdit','uses'=>'LoaibosuutapController@postEdit']);
+});
+
+//Bộ sưu tập trang web
+Route::get('bo-suu-tap','AdminController@bstweb');
+Route::get('bo-suu-tap/{url}','AdminController@xembstloai');
+
+// tin tức trang web
+Route::get('tin-tuc','AdminController@tintuc');
+Route::get('su-kien','AdminController@sukien');
+Route::get('tin-tuc-su-kien/{url}','AdminController@chitiettintucsukien');

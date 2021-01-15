@@ -372,12 +372,12 @@
                             <div class="font-bold m-b--35">ANSWERED TICKETS</div>
                             <ul class="dashboard-stat-list">
                                 <li>
-                                    TODAY
-                                    <span class="pull-right"><b>12</b> <small>TICKETS</small></span>
+                                    Tin tức - Sự kiện
+                                    <a href="{!! URL::route('admin.tintuc.list') !!}"><span class="pull-right" style="color:white"><b>Chi tiết</b></span></a>
                                 </li>
                                 <li>
-                                    YESTERDAY
-                                    <span class="pull-right"><b>15</b> <small>TICKETS</small></span>
+                                    Bộ sưu tập
+                                    <a href="{!! URL::route('admin.bosuutap.list') !!}"><span class="pull-right" style="color:white"><b>Chi tiết</b></span></a>
                                 </li>
                                 <li>
                                     LAST WEEK

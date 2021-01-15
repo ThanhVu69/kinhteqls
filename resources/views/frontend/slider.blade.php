@@ -1,7 +1,7 @@
 <link href="{{asset('/index/css/s.css')}}" rel="stylesheet" />
 <!-- Slider -->
 <header class="masthead">
-        <div class="container">
+        <div>
             <div class="container-all">
                 <!-- <input type="radio" id="1" name="image-slide" hidden />
                 <input type="radio" id="2" name="image-slide" hidden />
@@ -11,7 +11,7 @@
                 <div class="slide">
                     <div class="item-slide">
                         <img 
-                        src="{{asset('index/assets/img/FinalVideo_1609151995.726312.gif')}}">
+                        src="{{asset('index/assets/img/Slide.gif')}}">
                     </div>
                     @foreach($slide as $sl)
                     <div class="item-slide">
@@ -23,7 +23,7 @@
                 <div class="pagination">
                     <label class="pagination-item" for="1">
                         <img 
-                        src="{{asset('index/assets/img/FinalVideo_1609150916.617998.gif')}}">
+                        src="{{asset('index/assets/img/Slide.gif')}}">
                     </label>
                     @foreach($slide as $sl)
                     <label class="pagination-item" for="2">

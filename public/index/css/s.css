@@ -9,6 +9,11 @@
   width: 100%;
   border-radius: 6px;
   overflow: hidden;
+
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .slide{
@@ -126,7 +131,7 @@ input[id="5"]:checked ~ .pagination .pagination-item[for="5"]{
 
 
 @keyframes autoplay{
-  30%{
+  20%{
       transform: translate3d(calc(-100% * 0), 0, 0);
   }
   

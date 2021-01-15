@@ -7,6 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Viện Kinh tế và Quản lý</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('index/assets/img/logo_sem.png')}}" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -30,7 +31,6 @@
     </script>
     <!-- Card -->
     <link rel="stylesheet" href="{{asset('card/css/estilos.css')}}">
-
 </head>
 
 <body id="page-top">
@@ -111,12 +111,10 @@
     <br><br> <br>
     <!-- Slider-->
     @include('frontend.slider')
-    <br><br>
     <!-- Đào tạo -->
     @include('frontend.daotao')
     <!-- Giới thiệu chung-->
     <section class="page-section bg-light" id="gioithieuchung">
-
         <div class="container-fluid" style="background-color: #fcf9e2">
             <div class="text-center">
                 <br><br>
@@ -127,7 +125,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                            <img class="img-fluid" style="width: 250px; height: 200px;"
+                            <img class="img-fluid" style="width: 250px; height: 150px;"
                                 src="{{asset('/index/assets/img/bk5.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
@@ -138,20 +136,20 @@
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                            <img class="img-fluid" style="width: 250px; height: 200px;"
+                            <img class="img-fluid" style="width: 250px; height: 150px;"
                                 src="{{asset('/index/assets/img/bk10.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading" style="text-align:center">Lịch sử hình thành và
-                                    phát
-                                    triển</div>
+                                phát
+                                triển</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" style="width: 250px; height: 200px;"
+                            <img class="img-fluid" style="width: 250px; height: 150px;"
                                 src="{{asset('/index/assets/img/bk11.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
@@ -162,7 +160,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                            <img class="img-fluid" style="width: 250px; height: 200px;"
+                            <img class="img-fluid" style="width: 250px; height: 150px;"
                                 src="{{asset('/index/assets/img/bk12.jpg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
@@ -174,7 +172,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                            <img class="img-fluid" style="width: 250px; height: 200px;"
+                            <img class="img-fluid" style="width: 250px; height: 150px;"
                                 src="{{asset('/index/assets/img/bk13.png')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
@@ -185,7 +183,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                            <img class="img-fluid" style="width: 250px; height: 200px;"
+                            <img class="img-fluid" style="width: 250px; height: 150px;"
                                 src="{{asset('/index/assets/img/bk7.jpeg')}}" alt="" />
                         </a>
                         <div class="portfolio-caption">
@@ -204,7 +202,8 @@
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
                 </div>
-                <div class="container"  style="background-image: url('index/assets/img/nen1.jpg'); background-size: cover;">
+                <div class="container"
+                    style="background-image: url('index/assets/img/nen1.jpg'); background-size: cover;">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
@@ -234,7 +233,8 @@
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
                 </div>
-                <div class="container"  style="background-image: url('index/assets/img/nen3.jpg'); background-size: cover;">
+                <div class="container"
+                    style="background-image: url('index/assets/img/nen3.jpg'); background-size: cover;">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
@@ -264,7 +264,8 @@
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
                 </div>
-                <div class="container"  style="background-image: url('index/assets/img/nen4.jpg'); background-size: cover;">
+                <div class="container"
+                    style="background-image: url('index/assets/img/nen4.jpg'); background-size: cover;">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
@@ -294,7 +295,8 @@
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
                 </div>
-                <div class="container"  style="background-image: url('index/assets/img/nen1.jpg'); background-size: cover;">
+                <div class="container"
+                    style="background-image: url('index/assets/img/nen1.jpg'); background-size: cover;">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
@@ -322,7 +324,8 @@
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
                 </div>
-                <div class="container"  style="background-image: url('index/assets/img/nen3.jpg'); background-size: cover;">
+                <div class="container"
+                    style="background-image: url('index/assets/img/nen3.jpg'); background-size: cover;">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
@@ -352,7 +355,8 @@
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
                 </div>
-                <div class="container"  style="background-image: url('index/assets/img/nen4.jpg'); background-size: cover;">
+                <div class="container"
+                    style="background-image: url('index/assets/img/nen4.jpg'); background-size: cover;">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
@@ -392,25 +396,22 @@
                     <span><a href="{{asset('bo-mon-trung-tam')}}" style="color: #be0f0f;">Xem chi tiết</a>
                 </h3></span>
             </div>
-
             <div class="card-deck">
                 @foreach ($bomon as $bm)
                 <div class="col-sm-3">
                     <div class="card">
-                        <img class="card-img-top" src="upload/bomon/{{$bm->anh}}" style="width: auto; height:100px;"
-                            alt="Card image cap">
-                        <div class="card-body">
+                        <img class="card-img-top" src="upload/bomon/{{$bm->anh}}"
+                            style="width: auto; height:100px; background-size: cover;" alt="Card image cap">
+                        <div class="card-body" style="padding: 0.25rem;">
                             <h5 class="card-title" style="font-size:14px; text-align: center">Bộ môn<br>
                                 {{$bm->tenbomon}}
                             </h5>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">
+                            <small style="text-align: center;">
                                 <div class="dropdown">
-                                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
-                                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="color: #be0f0f;">
                                         Chi tiết
-                                    </button>
+                                    </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <li><a class="dropdown-item"
                                                 href="{{asset('gioi-thieu-chung4')}}/{{$bm->id}}">Giới thiệu chung</a>
@@ -444,99 +445,39 @@
         </div>
     </section>
     <!-- Học sinh - Sinh viên-->
-    <section class="page-section" id="sinhvien" style="background-image: url('index/assets/img/bk1.jpg'); background-size: cover;">
-        <br><br><br>
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase" style="color:#fff">Học sinh - Sinh viên</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="{{asset('index/assets/img/sv5.jpg')}}" alt="" />
-                        <h4 style="color:#fff">Ban cố vấn học tập</h4>
-                        <a href="#">
-                            <p style="color:#fff">Xem chi tiết</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="{{asset('index/assets/img/sv4.jpg')}}" alt="" />
-                        <h4 style="color:#fff">Ban chấp hành LCĐ</h4>
-                        <a href="#">
-                            <p style="color:#fff">Xem chi tiết</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="{{asset('index/assets/img/sv3.jpg')}}" alt="" />
-                        <h4 style="color:#fff">Ban chấp hành LCH</h4>
-                        <a href="#">
-                            <p style="color:#fff">Xem chi tiết</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="{{asset('index/assets/img/sv2.jpg')}}" alt="" />
-                        <h4 style="color:#fff">Các câu lạc bộ</h4>
-                        <a style="color:#fff" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Xem chi tiết
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">CLB Bạn yêu sách SEM</a></li>
-                            <li><a class="dropdown-item" href="#">CLB Nhà kinh tế trẻ SEM</a></li>
-                            <li><a class="dropdown-item" href="#">CLB Kỹ năng kinh doanh SEM</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                </div>
-                <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="{{asset('index/assets/img/sv1.jpg')}}" alt="" />
-                        <h4 style="color:#fff">Nghiên cứu khoa học sinh viên</h4>
-                        <a href="#">
-                            <p style="color:#fff">Xem chi tiết</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('frontend.sinhvien')
 
     <!-- Tin tức -->
-    @include('frontend.tintuc')
+    @include('frontend.tintuc.tintuc')
 
-     <!-- Tài liệu -->
-     @include('frontend.tailieu')
+    <!-- Tài liệu -->
+    @include('frontend.tailieu')
 
     @if(Auth::check())
     <section class="page-section bg-light" id="dangxuat">
         <div class="container">
+            <br><br>
             <div class="text-center">
                 <h3 class="section-heading text-uppercase">Viện Kinh tế và Quản lý</h3>
                 <div><a class="btn btn-secondary" onclick="return confirm('Bạn muốn đăng xuất?')" href="logout"
                         role="button">Đăng xuất</a></div><br><br>
                 <img style="width: 100px; height: 70px;" src="{{asset('/index/assets/img/logo_sem.PNG')}}" />
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/vienKTQL"><img src="{{asset('index/assets/img/facebook.png')}}"
+                        width="32" style="width: 32px;"></a>
             </div><br>
         </div>
     </section>
     @else
     <section class="page-section bg-light" id="dangnhap">
         <div class="container">
+            <br><br>
             <div class="text-center">
                 <h3 class="section-heading text-uppercase">Viện Kinh tế và Quản lý</h3>
                 <div><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">Đăng
                         nhập</button></div><br><br>
                 <img style="width: 100px; height: 70px;" src="{{asset('/index/assets/img/logo_sem.PNG')}}" />
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/vienKTQL"><img src="{{asset('index/assets/img/facebook.png')}}"
+                        width="32" style="width: 32px;"></a>
             </div><br>
         </div>
     </section>
@@ -553,7 +494,7 @@
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a> -->
                     </div>
                     <div class="col-lg-4 text-lg-right">
-                        <a style="color: aliceblue;" href="{{asset('trang-chu')}}">Trang chủ</a>
+                        <a style="color: aliceblue;" href="#">Lên đầu trang</a>
                     </div>
                 </div>
             </div>
@@ -576,9 +517,6 @@
     </script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Contact form JS-->
-    <script src="{{asset('index/assets/mail/jqBootstrapValidation.js')}}"></script>
-    <script src="{{asset('index/assets/mail/contact_me.js')}}"></script>
     <!-- Core theme JS-->
     <script src="{{asset('index/js/scripts.js')}}"></script>
     <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
@@ -594,6 +532,36 @@
     </script>
     <!-- Card -->
     <script src="{{asset('card/js/script.js')}}"></script>
+
+
+
+
+    <script>
+    $(document).ready(function() {
+        $("#myCarousel").on("slide.bs.carousel", function(e) {
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 3;
+            var totalItems = $(".carousel-item").length;
+
+            if (idx >= totalItems - (itemsPerSlide - 1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i = 0; i < it; i++) {
+                    // append slides to end
+                    if (e.direction == "left") {
+                        $(".carousel-item")
+                            .eq(i)
+                            .appendTo(".carousel-inner");
+                    } else {
+                        $(".carousel-item")
+                            .eq(0)
+                            .appendTo($(this).find(".carousel-inner"));
+                    }
+                }
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>

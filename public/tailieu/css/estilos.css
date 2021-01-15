@@ -25,13 +25,13 @@
 }
 
 .card--1 .card__img--hover{
-    background-image: url(/index/assets/img/1c50af680139f167a828.jpg);
+    background-image: url(/index/assets/img/52142dc7f49304cd5d82.jpg);
 }
 .card--2 .card__img--hover{
-    background-image: url(/index/assets/img/249e25c38b927bcc2283.jpg);
+    background-image: url(/index/assets/img/a8fd0e6b6b359b6bc224.jpg);
 }
 .card--3 .card__img--hover{
-    background-image: url(/index/assets/img/121553922_2761408510772814_217109618455982538_o.jpg);
+    background-image: url(/index/assets/img/c8bb7a4c0512f54cac03.jpg);
 }
 .card--4 .card__img--hover{
     background-image: url(/index/assets/img/125526043_2797587270488271_1052758779844000532_o.jpg);
@@ -79,8 +79,8 @@
     width: 100%;
     position: absolute;
     height: 235px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     top: 0;
 }
 
@@ -91,7 +91,7 @@
     background-color: #fff;
     width: 33.3%;
     position: relative;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.1);
 }
@@ -149,6 +149,12 @@
     opacity: 1;
 }
 @media only screen and (max-width: 700px) {
+    .cardss{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 1000px;
+    }
     .cardsss{
         margin-right: 25px;
         transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
@@ -156,9 +162,27 @@
         width: 33.3%;
         height: 150px;
         position: relative;
-        border-radius: 12px;
+        border-radius: 0;
         overflow: hidden;
         box-shadow: 0px 13px 10px -7px rgba(0,0,0,0.1);
+    }
+    .card__category{
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        color: #868686;
+    }
+    .card__info{
+        z-index: 2;
+        background-color: #fff;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 16px 24px 24px 24px;
+    }
+    .card__title{
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
     section {
         padding: 2rem 0;

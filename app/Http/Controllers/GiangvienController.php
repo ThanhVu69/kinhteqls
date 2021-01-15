@@ -133,9 +133,13 @@ class GiangvienController extends Controller
     return view('backend.giangvien.suagiangvien',['giangvien'=>$giangvien,'bomon'=>$bomon]);
     }
     //Xóa Giảng viên
-    public function getxoagiangvien($id)
+    public function getxoagiangvien(Request $request, $id)
     {
         $giangvien = canbogiangviens::find($id);
+            if($request->hasFile('anh'))
+            {
+            unlink("upload/giangvien/".$giangvien->anh);
+            }
         $giangvien->delete();
         echo"<script>
     alert('Xóa thành công!');
