@@ -1,7 +1,7 @@
 <link href="{{asset('/index/css/tintuc.css')}}" rel="stylesheet" />
 <section class="page-section" id="tintuc">
     <br><br>
-    <div class="container">
+    <div class="container" style="background-image: url('index/assets/img/nen3.jpg'); background-size: cover;">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Tin tức - Sự kiện</h2>
         </div>

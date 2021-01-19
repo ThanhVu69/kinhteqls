@@ -56,6 +56,7 @@ class SlideController extends Controller
             else{
                 $slide->anh = "";
             }
+            $slide->trichdan= $request->trichdan;
             $slide->save();
             alert()->success('Đã thêm thành công!', 'Successfully');
         }

@@ -1,0 +1,35 @@
+.nava {
+    color:#fff; 
+    font-size:12px; 
+    font-family: Arial; 
+    padding:8px;
+  }
+  .navbar-expand-lg {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+  @media only screen and (max-width: 700px) {
+    .nava {
+        color:#fff; 
+        font-size:8px; 
+        font-family: Arial; 
+        padding:3px
+      }
+    .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+  }
+  @media only screen and (max-width: 990px) {
+    .nava {
+        color:#fff; 
+        font-size:8px; 
+        font-family: Arial; 
+        padding:3px;
+      }
+    .navbarsmall-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+  }

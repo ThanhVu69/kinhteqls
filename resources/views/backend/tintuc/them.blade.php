@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Ngày</label>
-                                            <input class="form-control" type="date"name="txtTTDate" value="{!! old('txtTTDate') !!}" placeholder="Ngày..." />
+                                            <input type="date"name="txtTTDate" value="{!! old('txtTTDate') !!}" placeholder="Ngày..." />
                                             <div>
                                                 {!! $errors->first('txtTTDate') !!}
                                             </div>

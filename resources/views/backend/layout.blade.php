@@ -351,15 +351,6 @@
                                     GIỚI THIỆU CHUNG VỀ VIỆN
                                     <span class="pull-right"><a style="color: #ffffff;" href="{{asset('gioithieu')}}"><b>Chi tiết</b></a></span>
                                 </li>
-                                <li>#adminbsb</li>
-                                <li>#freeadmintemplate</li>
-                                <li>#bootstraptemplate</li>
-                                <li>
-                                    #freehtmltemplate
-                                    <span class="pull-right">
-                                        <i class="material-icons">trending_up</i>
-                                    </span>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -369,31 +360,15 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="card">
                         <div class="body bg-teal">
-                            <div class="font-bold m-b--35">ANSWERED TICKETS</div>
+                        <div class="m-b--35 font-bold"><h3>Tin tức - Bộ sưu tập</h3></div>
                             <ul class="dashboard-stat-list">
                                 <li>
-                                    Tin tức - Sự kiện
+                                    TIN TỨC - SỰ KIỆN
                                     <a href="{!! URL::route('admin.tintuc.list') !!}"><span class="pull-right" style="color:white"><b>Chi tiết</b></span></a>
                                 </li>
                                 <li>
-                                    Bộ sưu tập
+                                    BỘ SƯU TẬP
                                     <a href="{!! URL::route('admin.bosuutap.list') !!}"><span class="pull-right" style="color:white"><b>Chi tiết</b></span></a>
-                                </li>
-                                <li>
-                                    LAST WEEK
-                                    <span class="pull-right"><b>90</b> <small>TICKETS</small></span>
-                                </li>
-                                <li>
-                                    LAST MONTH
-                                    <span class="pull-right"><b>342</b> <small>TICKETS</small></span>
-                                </li>
-                                <li>
-                                    LAST YEAR
-                                    <span class="pull-right"><b>4 225</b> <small>TICKETS</small></span>
-                                </li>
-                                <li>
-                                    ALL
-                                    <span class="pull-right"><b>8 752</b> <small>TICKETS</small></span>
                                 </li>
                             </ul>
                         </div>

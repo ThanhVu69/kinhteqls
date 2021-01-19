@@ -18,6 +18,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{asset('/index/css/styles.css')}}" rel="stylesheet" />
     <link href="{{asset('/index/css/s.css')}}" rel="stylesheet" />
+    <link href="{{asset('/index/css/nav.css')}}" rel="stylesheet" />
     <link href="{{asset('/index/css/bomon.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -69,57 +70,64 @@
     </div>
     <!-- End Modal Đăng nhập -->
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #9c1010;">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img
-                    src="{{asset('/index/assets/img/logo_sem.PNG')}}" style="width:auto; height: 70px" alt="" /></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ml-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto" style="font-weight: 800;">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#daotao">Đào tạo</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gioithieuchung">Giới thiệu
-                            chung</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nghiencuuhoptac">Nghiên cứu - Hợp
-                            tác</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#bomon">Bộ môn - Trung tâm</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sinhvien">Học viên -Sinh viên</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tintuc">Tin tức - Sự kiện</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tailieu">Tài liệu</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Thư viện số</a>
-                    </li>
-                    @if(Auth::check())
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="trang-quan-ly">Bảng điều khiển</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dangxuat">Đăng xuất</a>
-                    </li>
-                    @else
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dangnhap">Đăng nhập</a>
-                    </li>
-                    @endif
-                </ul>
+    <div class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #9c1010;">
+        <ul class="navbar-nav">
+            <li><a style="color:#fff;" class="nava" href="#">Bộ môn - Trung tâm</a></li>
+            <li><a style="color:#fff;" class="nava" href="#">Thư viện số</a></li>
+            @if(Auth::check())
+            <li><a style="color:#fff;" class="nava" href="trang-quan-ly">Bảng điều khiển</a></li>
+            <li><a style="color:#fff;" class="nava" onclick="return confirm('Bạn muốn đăng xuất?')" href="logout">Đăng
+                    xuất</a></li>
+            @else
+            <li><a style="color:#fff;" class="nava" data-toggle="modal" data-target="#loginModal" href="#">Đăng nhập</a>
+            </li>
+            @endif
+        </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"
+            style="background-color: rgb(255 255 255 / 90%); top: 40px;">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img
+                        src="{{asset('index/assets/img/logo_hust.png')}}"
+                        style="position: center; width:auto; height: 70px" alt="" /></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img
+                        src="{{asset('index/assets/img/logo.png')}}" style="position: center; width:auto; height: 60px"
+                        alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto" style="font-weight: 800;">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#daotao">Đào tạo</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gioithieuchung">Giới thiệu
+                                chung</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nghiencuuhoptac">Nghiên cứu -
+                                Hợp
+                                tác</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sinhvien">Học viên -Sinh
+                                viên</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tintuc">Tin tức - Sự kiện</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tailieu">Tài liệu</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <br><br> <br>
+        </nav>
+    </div>
     <!-- Slider-->
     @include('frontend.slider')
     <!-- Đào tạo -->
     @include('frontend.daotao')
     <!-- Giới thiệu chung-->
-    <section class="page-section bg-light" id="gioithieuchung">
+    <!-- <section class="page-section bg-light" id="gioithieuchung">
         <div class="container-fluid" style="background-color: #fcf9e2">
             <div class="text-center">
                 <br><br>
                 <h2 class="section-heading text-uppercase">Giới thiệu chung</h2>
-                <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
             </div>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
@@ -194,10 +202,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Giới thiệu chung Modal-->
     <!-- Thư ngỏ-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
@@ -207,15 +215,12 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project Details Go Here-->
                                 <h3 class="text-uppercase" style="color: #fff">Thư ngỏ</h3><br>
-                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <div style="text-align: left; color: #fff">
                                     @foreach($gioithieu as $gt)
                                     {!! $gt->thungo !!}
                                     @endforeach
                                 </div>
-
                                 <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">
                                     <i class="fas fa-times mr-1"></i>
                                     Close
@@ -226,9 +231,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Lịch sử hình thành và phát triển-->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
@@ -238,14 +243,11 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project Details Go Here-->
                                 <h3 class="text-uppercase" style="color:#fff">Lịch sử hình thành và phát triển</h3><br>
-                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <div style="text-align: left; color:#fff">
                                     @foreach($gioithieu as $gt)
                                     {!! $gt->lichsu !!}
                                     @endforeach
-
                                 </div>
                                 <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">
                                     <i class="fas fa-times mr-1"></i>
@@ -257,9 +259,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Cơ cấu tổ chức-->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
@@ -269,9 +271,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project Details Go Here-->
                                 <h3 class="text-uppercase" style="color:#fff">Cơ cấu tổ chức</h3><br>
-                                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
                                 <div style="text-align: left; color:#fff">
                                     @foreach($gioithieu as $gt)
                                     {!! $gt->cocau !!}
@@ -288,9 +288,9 @@
             </div>
         </div>
     </div>
-    </div>
+    </div> -->
     <!-- Cán bộ và giảng viên-->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
@@ -300,7 +300,6 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project Details Go Here-->
                                 <h3 class="text-uppercase" style="color:#fff">Cán bộ và giảng viên</h3>
                                 @foreach ($canbo as $cb)
                                 <ul class="list-inline" style=" text-align: left; color: #fff">
@@ -317,9 +316,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Cơ sở vật chất-->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
@@ -329,15 +328,12 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project Details Go Here-->
                                 <h3 class="text-uppercase" style="color:#fff">Cơ sở vật chất</h3>
                                 <div style="text-align: left; color:#fff">
                                     @foreach($gioithieu as $gt)
                                     {!! $gt->cosovatchat !!}
                                     @endforeach
-
                                 </div>
-
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                                     <i class="fas fa-times mr-1"></i>
                                     Close
@@ -348,9 +344,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Thông tin liên hệ-->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
@@ -378,13 +374,12 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div> -->
     <!-- Nghiên cứu - Hợp tác -->
-    @include('frontend.nghiencuu')
+
 
     <!-- Bộ môn - Trung tâm-->
-    <section class="page-section bg-light" id="bomon">
+    <!-- <section class="page-section bg-light" id="bomon">
         <br><br><br>
         <div class="container">
             <div class="text-center">
@@ -443,63 +438,22 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- Học sinh - Sinh viên-->
-    @include('frontend.sinhvien')
 
     <!-- Tin tức -->
     @include('frontend.tintuc.tintuc')
 
     <!-- Tài liệu -->
     @include('frontend.tailieu')
+    
+    <!-- Lưu bút -->
+    @include('frontend.luubut')
 
-    @if(Auth::check())
-    <section class="page-section bg-light" id="dangxuat">
-        <div class="container">
-            <br><br>
-            <div class="text-center">
-                <h3 class="section-heading text-uppercase">Viện Kinh tế và Quản lý</h3>
-                <div><a class="btn btn-secondary" onclick="return confirm('Bạn muốn đăng xuất?')" href="logout"
-                        role="button">Đăng xuất</a></div><br><br>
-                <img style="width: 100px; height: 70px;" src="{{asset('/index/assets/img/logo_sem.PNG')}}" />
-                <a href="https://www.facebook.com/vienKTQL"><img src="{{asset('index/assets/img/facebook.png')}}"
-                        width="32" style="width: 32px;"></a>
-            </div><br>
-        </div>
-    </section>
-    @else
-    <section class="page-section bg-light" id="dangnhap">
-        <div class="container">
-            <br><br>
-            <div class="text-center">
-                <h3 class="section-heading text-uppercase">Viện Kinh tế và Quản lý</h3>
-                <div><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">Đăng
-                        nhập</button></div><br><br>
-                <img style="width: 100px; height: 70px;" src="{{asset('/index/assets/img/logo_sem.PNG')}}" />
-                <a href="https://www.facebook.com/vienKTQL"><img src="{{asset('index/assets/img/facebook.png')}}"
-                        width="32" style="width: 32px;"></a>
-            </div><br>
-        </div>
-    </section>
-    @endif
+    
     <!-- Footer-->
-    <div style="background-color: #811218;">
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left" style="color: aliceblue;">© SEM</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <!-- <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a> -->
-                    </div>
-                    <div class="col-lg-4 text-lg-right">
-                        <a style="color: aliceblue;" href="#">Lên đầu trang</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+    @include('frontend.footer')
+
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -532,36 +486,6 @@
     </script>
     <!-- Card -->
     <script src="{{asset('card/js/script.js')}}"></script>
-
-
-
-
-    <script>
-    $(document).ready(function() {
-        $("#myCarousel").on("slide.bs.carousel", function(e) {
-            var $e = $(e.relatedTarget);
-            var idx = $e.index();
-            var itemsPerSlide = 3;
-            var totalItems = $(".carousel-item").length;
-
-            if (idx >= totalItems - (itemsPerSlide - 1)) {
-                var it = itemsPerSlide - (totalItems - idx);
-                for (var i = 0; i < it; i++) {
-                    // append slides to end
-                    if (e.direction == "left") {
-                        $(".carousel-item")
-                            .eq(i)
-                            .appendTo(".carousel-inner");
-                    } else {
-                        $(".carousel-item")
-                            .eq(0)
-                            .appendTo($(this).find(".carousel-inner"));
-                    }
-                }
-            }
-        });
-    });
-    </script>
 </body>
 
 </html>

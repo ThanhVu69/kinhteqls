@@ -61,6 +61,10 @@
                                             <input required type="file" name="anh" 
                                             class="form-control">
                                         </div>
+                                        <div class="form-group">
+                                        <label>Trích dẫn</label>
+                                            <textarea name="trichdan" class="form-control ckeditor"></textarea>
+                                        </div>
                                         <input type="submit" name="submit" value="Thêm" class="btn btn-info">
                                         <a href="{{asset('slide')}}" class="btn btn-danger">Hủy bỏ</a>
                                     </div>
@@ -91,7 +95,7 @@
     <script src="{{asset('/backend/plugins/node-waves/waves.js')}}"></script>
 
     <!-- Ckeditor -->
-    <!-- <script src="{{asset('/backend/plugins/ckeditor/ckeditor.js')}}"></script> -->
+    <script src="{{asset('/backend/plugins/ckeditor/ckeditor.js')}}"></script>
 
     <!-- TinyMCE -->
     <script src="{{asset('/backend/plugins/tinymce/tinymce.js')}}"></script>

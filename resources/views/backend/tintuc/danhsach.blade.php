@@ -45,13 +45,13 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Tin tức
+                                Tin tức - Sự kiện
                             </h2>
                             <br>
                             <a class="btn btn-primary" href="{{asset('trang-quan-ly')}}" role="button">Bảng điều khiển</a>
                         </div>
                         <div class="body">
-                        <a href="{!! URL::route('admin.tintuc.getAdd') !!}" class="btn btn-info">Thêm tin tức</a><br><br>
+                        <a href="{!! URL::route('admin.tintuc.getAdd') !!}" class="btn btn-info">Thêm tin tức - sự kiện</a><br><br>
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
@@ -71,10 +71,10 @@
                                         <td>
                                             <img src="{{ asset('/upload/tintuc/'.$tt->hinhanh) }}" class="img-responsive img-rounded" alt="Image" style="width: 70px; height: 40px;">
                                         </td>
-                                            <td>{!! $tt->tieude !!}</td>
-                                            <td>{!! substr($tt->noidung,0,500) !!}</td>
-                                            <td>{!! $tt->url !!}</td>
-                                            <td>{!! $tt->ngay !!}</td>
+                                            <td>{{ $tt->tieude }}</td>
+                                            <td>{{ substr($tt->noidung,0,50) }}</td>
+                                            <td>{{ $tt->url }}</td>
+                                            <td>{{ $tt->ngay }}</td>
                                             <td>
                                                 <a href="{!! URL::route('admin.tintuc.getEdit', $tt->id ) !!}" 
                                                 onclick="return confirm('Bạn có chắc chắn muốn sửa?')" 

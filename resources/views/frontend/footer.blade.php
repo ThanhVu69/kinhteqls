@@ -1,7 +1,7 @@
 <link href="{{asset('trangphu/css/respon.css')}}" rel="stylesheet">
 <footer>
     <!-- FOOTER START -->
-    <div class="footer" style="background-image: url('index/assets/img/bk3.jpg'); background-size: cover;">
+    <div class="footer" style="background-image: url('index/assets/img/footer2.jpg'); background-size: cover;">
         <div class="contain">
             <div class="col">
                 <h1><a style="color: #fff" href="{{asset('trang-chu')}}">TRANG CHỦ</a></h1>

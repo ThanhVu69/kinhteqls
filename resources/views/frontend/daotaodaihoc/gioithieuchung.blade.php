@@ -18,18 +18,10 @@
 
 </head>
 
-<body>
-    @include('frontend.header')
+<body style="background-color:#f8f8f8">
+    @include('frontend.header')<br><br><br><br><br><br><br><br>
     <!-- Page Content -->
     <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img style="width:auto; height:auto;" src="{{asset('index/assets/img/bk2.jpg')}}"
-                        class="d-block w-1" alt="...">
-                </div>
-            </div>
-        </div>
         <div class="row">
             <!-- Post Content Column -->
             <div class="col-lg-8">
@@ -37,10 +29,11 @@
                 <h5 class="mt-4" style="color: #9c1010;">GIỚI THIỆU CHUNG</h5>
                 <hr>
                 <div style="font-size: 13px;">
-                <p style="text-align: right;">@foreach($daotaodaihoc as $mh)
-                    {!! $mh->gioithieuchung !!}
-                    @endforeach</p>
-            </div> </div>
+                    <p style="text-align: right;">@foreach($daotaodaihoc as $mh)
+                        {!! $mh->gioithieuchung !!}
+                        @endforeach</p>
+                </div>
+            </div>
             @include('frontend.daotaodaihoc.slidebardaotaodaihoc')
         </div>
         <!-- /.row -->

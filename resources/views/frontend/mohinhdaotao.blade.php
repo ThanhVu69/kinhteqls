@@ -26,12 +26,7 @@
     <!-- Page Content -->
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img style="width:auto; height:auto;" src="{{asset('index/assets/img/dai-hoc-bach-khoa.jpg')}}"
-                        class="d-block w-1" alt="...">
-                </div>
-            </div>
+            
         </div>
         <div class="row">
             <!-- Post Content Column -->

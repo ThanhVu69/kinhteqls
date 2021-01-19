@@ -57,6 +57,7 @@
                                     <thead>
                                         <tr >
                                             <th>Ảnh slide</th>
+                                            <th>Trích dẫn</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -64,6 +65,7 @@
                                     @foreach($slide as $hh)
                                         <tr>
                                             <td><img style="width: auto; height:50px;" src="/upload/slide/{{$hh->anh}}" /></td>
+                                            <td>{{$hh->trichdan}}</td>
                                             <td>
                                             <a href="xoaslide/{{$hh->id}}" 
                                             onclick="return confirm('Bạn có chắc chắn muốn xóa?')" 
