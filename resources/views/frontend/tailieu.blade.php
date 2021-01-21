@@ -38,8 +38,7 @@
             <div class="cardz">
                 <div class="row ">
                     <div class="col-md-8">
-                        <img src="{{asset('index/assets/img/c424c6f61fa2effcb6b3.jpg')}}"
-                            >
+                        <img src="{{asset('index/assets/img/c424c6f61fa2effcb6b3.jpg')}}">
                     </div>
                     <div class="col-md-3">
                         <div class="card-body">

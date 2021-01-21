@@ -21,13 +21,13 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color:#f8f8f8">
     @include('frontend.header')
     <!-- Page Content -->
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             
-        </div>
+        </div><br><br><br><br><br><br><br>
         <div class="row">
             <!-- Post Content Column -->
             <div class="col-lg-8">
@@ -44,15 +44,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-1">
+            </div>
             <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <!-- Categories Widget -->
-                <div class="card my-4">
+                <div class="card my-3">
                     <div class="card" style="width: 20rem;">
-                        <div class="card-header" style="background-color: #003a6a; color: #fff">
-                            Danh mục
+                        <div class="card-header">
+                            <b>DANH MỤC</b>
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush" style=" border-top: 3px groove #003366;">
                             <li class="list-group-item"><a style="color: #000" href="{{asset('mo-hinh-dao-tao')}}">Mô
                                     hình đào tạo</a></li>
                             <li class="list-group-item"><a style="color: #000" href="{{asset('gioi-thieu-chung1')}}">Đào
@@ -62,21 +64,8 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Preview Image -->
-                <img class="img-fluid rounded" src="{{asset('index/assets/img/bk.jpg')}}" alt="">
                 <hr>
-                <!-- Post Content -->
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Side Widget</h5>
-                    <div class="card-body">
-                        You can put anything you want inside of these side widgets. They are easy to use, and feature
-                        the new Bootstrap 4 card containers!
-                    </div>
-                </div>
-
             </div>
-
         </div>
         <!-- /.row -->
 

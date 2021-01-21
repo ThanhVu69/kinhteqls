@@ -32,7 +32,7 @@
             </div>
             <div class="box box3" style="border: 1px solid #919191;">
                 <img src="{{asset('index/assets/img/8b5dd98100d5f08ba9c4.jpg')}}" alt="">
-                <h2 style="color:#003366">ĐÀO TẠO THẠC SỸ</h2>
+                <h2 style="color:#003366">ĐÀO TẠO SAU ĐẠI HỌC</h2>
                 <div class="container-p">
                     <p>Hiện nay, Viện có các chương trình đào tạo Sau đại học,
                         đào tạo cao học: Quản trị kinh doanh, Quản lý kinh tế

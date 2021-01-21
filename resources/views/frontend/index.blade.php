@@ -18,7 +18,6 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{asset('/index/css/styles.css')}}" rel="stylesheet" />
     <link href="{{asset('/index/css/s.css')}}" rel="stylesheet" />
-    <link href="{{asset('/index/css/nav.css')}}" rel="stylesheet" />
     <link href="{{asset('/index/css/bomon.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -69,376 +68,19 @@
     </div>
     </div>
     <!-- End Modal Đăng nhập -->
+
     <!-- Navigation-->
-    <div class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #9c1010;">
-        <ul class="navbar-nav">
-            <li><a style="color:#fff;" class="nava" href="#">Bộ môn - Trung tâm</a></li>
-            <li><a style="color:#fff;" class="nava" href="#">Thư viện số</a></li>
-            @if(Auth::check())
-            <li><a style="color:#fff;" class="nava" href="trang-quan-ly">Bảng điều khiển</a></li>
-            <li><a style="color:#fff;" class="nava" onclick="return confirm('Bạn muốn đăng xuất?')" href="logout">Đăng
-                    xuất</a></li>
-            @else
-            <li><a style="color:#fff;" class="nava" data-toggle="modal" data-target="#loginModal" href="#">Đăng nhập</a>
-            </li>
-            @endif
-        </ul>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"
-            style="background-color: rgb(255 255 255 / 90%); top: 40px;">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img
-                        src="{{asset('index/assets/img/logo_hust.png')}}"
-                        style="position: center; width:auto; height: 70px" alt="" /></a>
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img
-                        src="{{asset('index/assets/img/logo.png')}}" style="position: center; width:auto; height: 60px"
-                        alt="" /></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto" style="font-weight: 800;">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#daotao">Đào tạo</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gioithieuchung">Giới thiệu
-                                chung</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nghiencuuhoptac">Nghiên cứu -
-                                Hợp
-                                tác</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sinhvien">Học viên -Sinh
-                                viên</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tintuc">Tin tức - Sự kiện</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tailieu">Tài liệu</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+    @include('frontend.headerchinh')
     <!-- Slider-->
     @include('frontend.slider')
     <!-- Đào tạo -->
     @include('frontend.daotao')
     <!-- Giới thiệu chung-->
-    <!-- <section class="page-section bg-light" id="gioithieuchung">
-        <div class="container-fluid" style="background-color: #fcf9e2">
-            <div class="text-center">
-                <br><br>
-                <h2 class="section-heading text-uppercase">Giới thiệu chung</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                            <img class="img-fluid" style="width: 250px; height: 150px;"
-                                src="{{asset('/index/assets/img/bk5.jpg')}}" alt="" />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center">Thư ngỏ</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                            <img class="img-fluid" style="width: 250px; height: 150px;"
-                                src="{{asset('/index/assets/img/bk10.jpg')}}" alt="" />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center">Lịch sử hình thành và
-                                phát
-                                triển</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                            <img class="img-fluid" style="width: 250px; height: 150px;"
-                                src="{{asset('/index/assets/img/bk11.jpg')}}" alt="" />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center">Cơ cấu tổ chức</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                            <img class="img-fluid" style="width: 250px; height: 150px;"
-                                src="{{asset('/index/assets/img/bk12.jpg')}}" alt="" />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center">Cán bộ và giảng viên
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                            <img class="img-fluid" style="width: 250px; height: 150px;"
-                                src="{{asset('/index/assets/img/bk13.png')}}" alt="" />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center">Cơ sở vật chất</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                            <img class="img-fluid" style="width: 250px; height: 150px;"
-                                src="{{asset('/index/assets/img/bk7.jpeg')}}" alt="" />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading" style="text-align:center">Thông tin liên hệ
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- Giới thiệu chung Modal-->
-    <!-- Thư ngỏ-->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
-                </div>
-                <div class="container"
-                    style="background-image: url('index/assets/img/nen1.jpg'); background-size: cover;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <h3 class="text-uppercase" style="color: #fff">Thư ngỏ</h3><br>
-                                <div style="text-align: left; color: #fff">
-                                    @foreach($gioithieu as $gt)
-                                    {!! $gt->thungo !!}
-                                    @endforeach
-                                </div>
-                                <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times mr-1"></i>
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Lịch sử hình thành và phát triển-->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
-                </div>
-                <div class="container"
-                    style="background-image: url('index/assets/img/nen3.jpg'); background-size: cover;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <h3 class="text-uppercase" style="color:#fff">Lịch sử hình thành và phát triển</h3><br>
-                                <div style="text-align: left; color:#fff">
-                                    @foreach($gioithieu as $gt)
-                                    {!! $gt->lichsu !!}
-                                    @endforeach
-                                </div>
-                                <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times mr-1"></i>
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Cơ cấu tổ chức-->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
-                </div>
-                <div class="container"
-                    style="background-image: url('index/assets/img/nen4.jpg'); background-size: cover;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <h3 class="text-uppercase" style="color:#fff">Cơ cấu tổ chức</h3><br>
-                                <div style="text-align: left; color:#fff">
-                                    @foreach($gioithieu as $gt)
-                                    {!! $gt->cocau !!}
-                                    @endforeach
-                                </div>
-                            </div>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                <i class="fas fa-times mr-1"></i>
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div> -->
-    <!-- Cán bộ và giảng viên-->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
-                </div>
-                <div class="container"
-                    style="background-image: url('index/assets/img/nen1.jpg'); background-size: cover;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <h3 class="text-uppercase" style="color:#fff">Cán bộ và giảng viên</h3>
-                                @foreach ($canbo as $cb)
-                                <ul class="list-inline" style=" text-align: left; color: #fff">
-                                    {!! $cb->canbogiangvien !!}
-                                </ul>
-                                @endforeach
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times mr-1"></i>
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Cơ sở vật chất-->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
-                </div>
-                <div class="container"
-                    style="background-image: url('index/assets/img/nen3.jpg'); background-size: cover;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <h3 class="text-uppercase" style="color:#fff">Cơ sở vật chất</h3>
-                                <div style="text-align: left; color:#fff">
-                                    @foreach($gioithieu as $gt)
-                                    {!! $gt->cosovatchat !!}
-                                    @endforeach
-                                </div>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times mr-1"></i>
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Thông tin liên hệ-->
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal"><i class="fas fa-times mr-1" alt="Close modal"></i>
-                </div>
-                <div class="container"
-                    style="background-image: url('index/assets/img/nen4.jpg'); background-size: cover;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <div style="text-align: left;">
-                                    <h3 class="text-uppercase" style="color:#fff">Thông tin liên hệ</h3>
-                                    <div style="text-align: left; color:#fff">
-                                        @foreach($gioithieu as $gt)
-                                        {!! $gt->thongtin !!}
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                    <i class="fas fa-times mr-1"></i>
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    
     <!-- Nghiên cứu - Hợp tác -->
 
-
     <!-- Bộ môn - Trung tâm-->
-    <!-- <section class="page-section bg-light" id="bomon">
-        <br><br><br>
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Bộ môn - Trung tâm</h2>
-                <h3 class="section-subheading text-muted">Viện Kinh tế và Quản lý hiện có 66 cán bộ giảng dạy và 6 cán
-                    bộ phục vụ giảng dạy,
-                    là những người hết lòng với công việc và có chuyên môn vững vàng trong các lĩnh vực tài chính,
-                    kinh tế năng lượng, kinh tế học, kế toán, quản trị sản xuất và marketing.<br><br>
-                    <span><a href="{{asset('bo-mon-trung-tam')}}" style="color: #be0f0f;">Xem chi tiết</a>
-                </h3></span>
-            </div>
-            <div class="card-deck">
-                @foreach ($bomon as $bm)
-                <div class="col-sm-3">
-                    <div class="card">
-                        <img class="card-img-top" src="upload/bomon/{{$bm->anh}}"
-                            style="width: auto; height:100px; background-size: cover;" alt="Card image cap">
-                        <div class="card-body" style="padding: 0.25rem;">
-                            <h5 class="card-title" style="font-size:14px; text-align: center">Bộ môn<br>
-                                {{$bm->tenbomon}}
-                            </h5>
-                            <small style="text-align: center;">
-                                <div class="dropdown">
-                                    <a href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
-                                        style="color: #be0f0f;">
-                                        Chi tiết
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item"
-                                                href="{{asset('gioi-thieu-chung4')}}/{{$bm->id}}">Giới thiệu chung</a>
-                                        </li>
-                                        <li><a class="dropdown-item"
-                                                href="{{asset('can-bo-giang-vien')}}/{{$bm->id}}">Cán bộ và giảng
-                                                viên</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="{{asset('huong-nghien-cuu')}}/{{$bm->id}}">Các hướng nghiên
-                                                cứu</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="{{asset('cong-trinh-khoa-hoc')}}/{{$bm->id}}">Các công trình khoa
-                                                học</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="{{asset('hoc-phan-dam-nhan')}}/{{$bm->id}}">Các học phần đảm
-                                                nhận</a></li>
-                                        <li><a class="dropdown-item" href="{{asset('co-so-vat-chat')}}/{{$bm->id}}">Cơ
-                                                sở vật chất</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="{{asset('sach-da-xuat-ban')}}/{{$bm->id}}">Sách đã xuất bản</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-
-        </div>
-    </section> -->
+    
     <!-- Học sinh - Sinh viên-->
 
     <!-- Tin tức -->
@@ -455,7 +97,7 @@
     @include('frontend.footer')
 
     <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -475,8 +117,11 @@
     <script src="{{asset('index/js/scripts.js')}}"></script>
     <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
     <!-- Boostrap 4.5 -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">

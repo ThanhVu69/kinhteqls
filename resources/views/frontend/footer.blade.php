@@ -38,34 +38,42 @@
             <div class="col">
                 <h1><a style="color: #fff" href="{{asset('trang-chu')}}">TÀI LIỆU</a></h1>
                 <h1 style="color: #fff">TIN TỨC - SỰ KIỆN</h1>
-                <ul>
+                <!-- <ul>
                     <li><a style="color: #fff" href="#">Thời khóa biểu</a></li>
                     <li><a style="color: #fff" href="#">Thông tin cho SVCQ</a></li>
                     <li><a style="color: #fff" href="#">Thông tin cho cao học</a></li>
                     <li><a style="color: #fff" href="#">Thông tin NVS</a></li>
-                </ul>
+                </ul> -->
                 <h1><a style="color: #fff" href="{{asset('trang-chu')}}">THƯ VIỆN SỐ</a></h1>
             </div>
             <div class="col">
                 <br>
-            <p><img style="width:auto; height:100px" src="{{asset('index/assets/img/logo_sem.png')}}"></p>
-            <div style="font-size:12px; color: #fff"><b>VIỆN KINH TẾ & QUẢN LÝ</b><br>
-                Đại học Bách Khoa Hà Nội<br><br>
-                P302-304 Nhà C9, ĐHBKHN; Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà
-                Nội<br><br>
-                <i class="fa fa-phone-square"></i>(84-4) 3869 2304<br>
-                sem@hust.edu.vn<br>
-                http://sem.hust.edu.vn<br>
-                Hotline: 082 8692304
+                <p><img style="width:auto; height:100px" src="{{asset('index/assets/img/logo_sem.png')}}"></p>
+                <div style="font-size:12px; color: #fff"><b>VIỆN KINH TẾ & QUẢN LÝ</b><br>
+                    Đại học Bách Khoa Hà Nội<br><br>
+                    P302-304 Nhà C9, ĐHBKHN; Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà
+                    Nội<br><br>
+                    <i class="fa fa-phone-square"></i>(84-4) 3869 2304<br>
+                    sem@hust.edu.vn<br>
+                    http://sem.hust.edu.vn<br>
+                    Hotline: 082 8692304
+                </div>
             </div>
-            </div>
-            <div class="col social">
-                <h1>Follow us</h1>
+            <div class="col social" >
+                <h1 style="color:#fff">Follow us</h1>
                 <ul>
-                    <li><a href="https://www.facebook.com/vienKTQL"><img src="{{asset('index/assets/img/facebook.png')}}" width="32" style="width: 32px;"></a></li>
+                    <li><a href="https://www.facebook.com/vienKTQL"><img
+                                src="{{asset('index/assets/img/facebook.png')}}" width="32" style="width: 32px;"></a>
+                    </li>
                 </ul>
             </div>
-            <div class="clearfix"></div>
+            <!-- <div class="col social">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top" style=" color:#fff; font-size:15px"><img
+                        src="{{asset('index/assets/img/len.jpg')}}"
+                        style="position: center; width:auto; height: 30px;" alt="" /> Lên đầu trang</a>
+            </div> -->
+            <div class="clearfix">
+            </div>
         </div>
     </div>
     <!-- END OF FOOTER -->

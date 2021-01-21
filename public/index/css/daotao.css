@@ -1,0 +1,29 @@
+.cardz {
+    width: 90%;
+    height: 100%;
+    padding: 0px;
+    background-color: #fff;
+    margin: 10px auto;
+    position: relative;
+
+}
+
+.cardz img {
+    width: 800px;
+    height: 500px;
+}
+
+@media only screen and (max-width: 700px) {
+    .cardz {
+        width: 300px;
+        padding: 0px;
+        background-color: #fff;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .cardz img {
+        width: 300px;
+        height: 180px;
+    }
+}

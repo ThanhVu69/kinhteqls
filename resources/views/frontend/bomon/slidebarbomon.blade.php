@@ -1,12 +1,14 @@
+<div class="col-md-1">
+</div>
 <!-- Sidebar -->
-<div class="col-md-4">
+<div class="col-md-3">
     <!-- Danh mục -->
-    <div class="card my-4" style="font-size: 13px;">
+    <div class="card my-3" style="font-size: 13px;">
         <div class="card" style="width: 20rem;">
-            <div class="card-header" style="background-color: #003a6a; color: #fff">
-                Bộ môn trung tâm
+            <div class="card-header">
+                <b>BỘ MÔN TRUNG TÂM</b>
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush" style=" border-top: 3px groove #003366;">
                 <li class="list-group-item"><a style="color: #000" href="{{asset('bo-mon-trung-tam')}}">Giới
                         thiệu chung</a></li>
                 @foreach($bomon as $ct)
@@ -44,14 +46,14 @@
             </ul>
         </div>
     </div>
-    <hr>
-    <img class="img-fluid rounded" src="{{asset('index/assets/img/bk8.jpg')}}" alt="">
+    <hr><br><br><br><br><br><br>
+    <!-- <img class="img-fluid rounded" src="{{asset('index/assets/img/bk8.jpg')}}" alt=""> -->
     <!-- Side Widget -->
-    <div class="card my-4" style="font-size: 13px;">
+    <!-- <div class="card my-4" style="font-size: 13px;">
         <h5 class="card-header">Side Widget</h5>
         <div class="card-body">
             You can put anything you want inside of these side widgets. They are easy to use, and feature
             the new Bootstrap 4 card containers!
         </div>
-    </div>
+    </div> -->
 </div>

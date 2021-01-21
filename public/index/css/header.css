@@ -1,0 +1,44 @@
+.dropdown-item {
+    padding: 0.25rem 0rem;
+    font-size: 14px;
+}
+.dropdown {
+    position: static;
+    font-size: 14px;
+    color: #003366;
+}
+
+.dropdown-menu {
+    width: 100%;
+    height: auto;
+    padding:15px;
+}
+.dropdown-menu img {
+    width:500px; 
+    height: auto;
+}
+@media only screen and (max-width: 700px) {
+    .dropdown-item {
+        padding: 0.0025rem 0.5rem;
+        font-size: 8px;
+        color: #000;
+    }
+    .dropdown-item1 {
+        padding: 0.0025rem 0.5rem;
+        font-size: 8px;
+        color: #000;
+    }
+    .dropdown {
+        font-size: 8px;
+        color: #003366;
+    }
+
+    .dropdown-menu {
+        width: auto;
+        height: auto;
+    }
+    .dropdown-menu img {
+    width:80px; 
+    height: auto;
+}
+}

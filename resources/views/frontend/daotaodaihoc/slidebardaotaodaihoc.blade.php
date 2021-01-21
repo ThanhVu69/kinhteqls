@@ -1,7 +1,7 @@
 <!-- Sidebar -->
 <div class="col-md-3">
     <!-- Danh mục -->
-    <div class="card my-4" style="font-size: 15px;">
+    <div class="card my-3" style="font-size: 15px;">
         <div class="card" style="width: 21.5rem;">
             <div class="card-header">
                 ĐÀO TẠO ĐẠI HỌC
