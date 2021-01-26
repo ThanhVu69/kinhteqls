@@ -370,6 +370,10 @@
                                     BỘ SƯU TẬP
                                     <a href="{!! URL::route('admin.bosuutap.list') !!}"><span class="pull-right" style="color:white"><b>Chi tiết</b></span></a>
                                 </li>
+                                <li>
+                                    TÀI LIỆU
+                                    <a href="{!! URL::route('admin.tailieu.list') !!}"><span class="pull-right" style="color:white"><b>Chi tiết</b></span></a>
+                                </li>
                             </ul>
                         </div>
                     </div>

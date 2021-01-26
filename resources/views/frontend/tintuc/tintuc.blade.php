@@ -24,6 +24,7 @@
                         <div class="c-time">{!! date('d-m-Y',strtotime($tt->ngay)) !!}</div>
                     </div>
                     <h1 class="c-title">{!! ($tt->tieude) !!}</h1>
+                    <br><br>
                     <!-- <div class="c-creator">by <a href="">Tyler Platt</a></div> -->
                 </div>
             </div>
@@ -54,6 +55,7 @@
                         <div class="c-time">{!! date('d-m-Y',strtotime($sk->ngay)) !!}</div>
                     </div>
                     <h1 class="c-title">{!! ($sk->tieude) !!}</h1>
+                    <br><br>
                      <!-- <div class="c-creator">by <a href="">Tyler Platt</a></div> -->
                 </div>
             </div>

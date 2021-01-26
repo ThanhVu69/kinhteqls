@@ -44,21 +44,12 @@
                         <div class="card-body">
                             <p class="card-text" style="font-size: 13px; color:#000;"><b>TÀI LIỆU CHUNG</b></p>
                             <br>
-                            <a href="#">
-                                <p class="card-text" style="font-size: 13px; color:#003366;">SINH VIÊN ĐẠI HỌC</p>
+                            @foreach($loaitailieu as $item)
+                            <a href="{{asset('/tai-lieu/'.$item->url)}}">
+                                <p class="card-text" style="font-size: 13px; color:#003366;">{!! $item->ten !!}</p>
                             </a>
                             <hr>
-                            <a href="#">
-                                <p class="card-text" style="font-size: 13px; color:#003366;">HỌC VIÊN CAO HỌC</p>
-                            </a>
-                            <hr>
-                            <a href="#">
-                                <p class="card-text" style="font-size: 13px; color:#003366;">NGHIÊN CỨU SINH</p>
-                            </a>
-                            <hr>
-                            <a href="#">
-                                <p class="card-text" style="font-size: 13px; color:#003366;">TÀI LIỆU CHO CÁN BỘ</p>
-                            </a>
+                            @endforeach
                             <hr style=" groove #919191; border-top: 3px groove #003366;">
                             <p class="card-text" style="font-size: 13px; color:#000;"><b>TÀI LIỆU KHÁC</b></p>
                             <br>

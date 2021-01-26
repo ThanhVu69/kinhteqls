@@ -5,11 +5,12 @@
 <div class="navbar navbarsmall-expand-lg navbar-dark fixed-top" style="background-color: #9c1010;">
     <ul class="navbar-nav">
         <li><a style="color:#fff;" class="nava" href="{{asset('bo-mon-trung-tam')}}">Bộ môn - Trung tâm</a></li>
+        <li><a style="color:#fff;" class="nava" href="{{asset('bo-suu-tap')}}">Bộ sưu tập</a></li>
         <li><a style="color:#fff;" class="nava" href="#">Thư viện số</a></li>
         @if(Auth::check())
-        <li><a style="color:#fff;" class="nava" href="trang-quan-ly">Bảng điều khiển</a></li>
+        <li><a style="color:#fff;" class="nava" href="{{asset('trang-quan-ly')}}">Bảng điều khiển</a></li>
         <li><a style="color:#fff;" class="nava" onclick="return confirm('Bạn muốn đăng xuất?')" href="logout">Đăng
-                xuất</a></li>
+            xuất</a></li>
         @else
         <li><a style="color:#fff;" class="nava" data-toggle="modal" data-target="#loginModal" href="#">Đăng nhập</a>
         </li>

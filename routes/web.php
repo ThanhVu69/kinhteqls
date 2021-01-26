@@ -191,3 +191,25 @@ Route::get('bo-suu-tap/{url}','AdminController@xembstloai');
 Route::get('tin-tuc','AdminController@tintuc');
 Route::get('su-kien','AdminController@sukien');
 Route::get('tin-tuc-su-kien/{url}','AdminController@chitiettintucsukien');
+// 
+//tài liệu
+Route::group(['prefix' => 'tailieu'], function() {
+    Route::get('danhsach/{id}',['as'=>'admin.tailieu.loai','uses'=>'TailieuController@loai']);
+    Route::get('danhsach',['as'=>'admin.tailieu.list','uses'=>'TailieuController@getList']);
+    Route::get('them',['as'=>'admin.tailieu.getAdd','uses'=>'TailieuController@getAdd']);
+    Route::post('them',['as'=>'admin.tailieu.postAdd','uses'=>'TailieuController@postAdd']);
+    Route::get('xoa/{id}',['as'=>'admin.tailieu.getDelete','uses'=>'TailieuController@getDelete']);
+});
+
+//Loại tài liệu
+Route::group(['prefix' => 'loaitailieu'], function() {
+    Route::get('danhsach',['as'=>'admin.loaitailieu.list','uses'=>'LoaitailieuController@getList']);
+    Route::get('them',['as'=>'admin.loaitailieu.getAdd','uses'=>'LoaitailieuController@getAdd']);
+    Route::post('them',['as'=>'admin.loaitailieu.postAdd','uses'=>'LoaitailieuController@postAdd']);
+    Route::get('xoa/{id}',['as'=>'admin.loaitailieu.getDelete','uses'=>'LoaitailieuController@getDelete']);
+    Route::get('sua/{id}',['as'=>'admin.loaitailieu.getEdit','uses'=>'LoaitailieuController@getEdit']);
+    Route::post('sua/{id}',['as'=>'admin.loaitailieu.postEdit','uses'=>'LoaitailieuController@postEdit']);
+});
+// tài liệu web
+Route::get('tai-lieu','AdminController@tlweb');
+Route::get('tai-lieu/{url}','AdminController@xemtlloai');

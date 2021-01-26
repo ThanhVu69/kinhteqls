@@ -17,6 +17,8 @@ use App\lienhes;
 use Illuminate\Support\Str;
 use App\chuongtrinhdaotaos;
 use App\slides;
+use App\tailieus;
+use App\loaitailieus;
 use App\bomontrungtams;
 use Illuminate\Http\Request;
 
@@ -67,10 +69,13 @@ class AdminController extends Controller
         $bomon = bomons::all();
         $chuongtrinhdaotao= chuongtrinhdaotaos::all();
 
+        $tailieu= tailieus::all();
+        $loaitailieu= loaitailieus::all();
+
         $tintuc = DB::table('tintucs')->where('loai','=','0')->orderBy('ngay','desc')->limit(2)->get();
         $sukien = DB::table('tintucs')->where('loai','=','1')->orderBy('ngay','desc')->limit(2)->get();
 
-        return view('frontend.index',compact('chuongtrinhdaotao','bomon','canbo','slide','gioithieu','tintuc','sukien'));
+        return view('frontend.index',compact('chuongtrinhdaotao','bomon','canbo','slide','gioithieu','tintuc','sukien','tailieu','loaitailieu'));
     }
 //Trang admin
     public function homead()
@@ -145,5 +150,20 @@ class AdminController extends Controller
     public function chitiettintucsukien($url){
         $chitiettt = DB::table('tintucs')->where('url',$url)->first();
         return view('frontend.tintuc.chitiet',compact('chitiettt'));
+    }
+    // Tài liệu
+    public function tlweb(){
+        $loai = DB::table('loaitailieus')->get();
+        $tailieu = DB::table('tailieus')->paginate(6);
+
+        return view('frontend.tailieu.tailieu',compact('tailieu','loai'));
+    }
+    public function xemtlloai($url){
+        $id = DB::table('loaitailieus')->select('id')->where('url',$url)->first();
+        $i = $id->id;
+        $tailieu = DB::table('tailieus')->where('id_loaitailieu',$i)->paginate(6);
+        $loai = DB::table('loaitailieus')->get();
+        $loaitailieu = DB::table('loaitailieus')->where('id',$i)->first();
+        return view('frontend.tailieu.tailieu',compact('loaitailieu','tailieu','loai'));
     }
 }

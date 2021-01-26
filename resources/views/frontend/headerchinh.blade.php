@@ -4,6 +4,7 @@
 <div class="navbar navbarsmall-expand-lg navbar-dark fixed-top" style="background-color: #9c1010;">
     <ul class="navbar-nav">
         <li><a style="color:#fff;" class="nava" href="{{asset('bo-mon-trung-tam')}}">Bộ môn - Trung tâm</a></li>
+        <li><a style="color:#fff;" class="nava" href="{{asset('bo-suu-tap')}}">Bộ sưu tập</a></li>
         <li><a style="color:#fff;" class="nava" href="#">Thư viện số</a></li>
         @if(Auth::check())
         <li><a style="color:#fff;" class="nava" href="trang-quan-ly">Bảng điều khiển</a></li>
@@ -221,14 +222,10 @@
                                             <div class="dropdown-item"><b>Tài liệu</b>
                                             </div>
                                             <hr style=" border-top: 3px groove #003366;">
-                                            <a class="dropdown-item" href="{{asset('tin-tuc')}}">SINH VIÊN ĐẠI HỌC</a>
+                                            @foreach($loaitailieu as $loai)
+                                            <a class="dropdown-item" href="{{asset('/tai-lieu/'.$loai->url)}}">{!! $loai->ten !!}</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('su-kien')}}">HỌC VIÊN CAO HỌC</a>
-                                            <hr>
-                                            <a class="dropdown-item" href="{{asset('su-kien')}}">NGHIÊN CỨU SINH</a>
-                                            <hr>
-                                            <a class="dropdown-item" href="{{asset('su-kien')}}">TÀI LIỆU CHO CÁN BỘ</a>
-                                            <hr>
+                                            @endforeach
                                             <a class="dropdown-item" href="{{asset('su-kien')}}">VĂN BẢN QUY CHẾ ĐÀO
                                                 TẠO</a>
                                             <hr>
