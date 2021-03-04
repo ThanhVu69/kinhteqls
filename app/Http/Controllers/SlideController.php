@@ -23,13 +23,18 @@ class SlideController extends Controller
         $slide= slides::all();
         return view('backend.slide.slide',['slide'=>$slide]);
     }
-    //Thêm slide
-    public function getthemslide()
+    //Sửa slide
+    public function getsuaslide($id)
     {
-        return view('backend.slide.themslide');
+        $suaslide= slides::find($id);
+        return view('backend.slide.suaslide',compact('suaslide'));
     }
-    public function postthemslide(Request $request)
-    {
+    public function postsuaslide(Request $request,$id)
+    {    
+    $suaslide = slides::find($id);
+    $validator = Validator::make($request->all(),[
+        'trichdan'=>'required|min:1',
+        ]);
         $validator = Validator::make($request->all(),[
             'anh' => 'image|mimes:jpeg,jpg,png,gif'
             ]);
@@ -37,9 +42,9 @@ class SlideController extends Controller
         {
             alert()->error('Lỗi rồi!', 'Không nhập ảnh quá 2MB!, Định dạng ảnh phải là jepg, jpg và png');
         }
-        else {
-            $slide = new slides;
-            if($request->hasFile('anh'))
+    else{
+        $suaslide->trichdan= $request->trichdan;
+        if($request->hasFile('anh'))
             {
                 $file = $request->file('anh');
 
@@ -50,18 +55,16 @@ class SlideController extends Controller
                     $anh = Str::random(4)."_".$name;
                 }
                 $file->move("upload/slide",$anh);
-                // $file->storeAs("public/upload/slide",$anh);
-                $slide->anh = $anh;
+                unlink("upload/slide/".$suaslide->anh);
+                $suaslide->anh = $anh;
             }
-            else{
-                $slide->anh = "";
-            }
-            $slide->trichdan= $request->trichdan;
-            $slide->save();
-            alert()->success('Đã thêm thành công!', 'Successfully');
-        }
-        return view('backend.slide.themslide',compact('slide'));
-    } 
+            
+        $suaslide->save();
+        alert()->success('Thành công', 'Đã sửa!');
+        
+    }
+    return view('backend.slide.suaslide',['suaslide'=>$suaslide]);
+    }
     //Xóa Slide
     public function getxoaslide($id)
     {

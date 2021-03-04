@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Thêm Slide</title>
+    <title>Sửa Slide</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -52,20 +52,23 @@
                         </div>
                         <div class="body">
 
-                            <form action="/themslide" method="POST" enctype="multipart/form-data">
+                            <form action="/suaslide/{{$suaslide->id}}" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}" />
                                 <div class="row" style="margin-bottom:40px">
                                     <div class="col-xs-12">
                                         <div class="form-group">
                                             <label>Ảnh slide</label>
-                                            <input required type="file" name="anh" 
+                                            <p>
+                                            <img style="width: auto; height:100px" src="/upload/slide/{{$suaslide->anh}}" />
+                                            </p>
+                                            <input type="file" name="anh" value
                                             class="form-control">
                                         </div>
                                         <div class="form-group">
                                         <label>Trích dẫn</label>
-                                            <textarea name="trichdan" class="form-control ckeditor"></textarea>
+                                            <textarea name="trichdan" class="form-control ckeditor">{{$suaslide->trichdan}}</textarea>
                                         </div>
-                                        <input type="submit" name="submit" value="Thêm" class="btn btn-info">
+                                        <input type="submit" name="submit" value="Sửa" class="btn btn-info">
                                         <a href="{{asset('slide')}}" class="btn btn-danger">Hủy bỏ</a>
                                     </div>
                                 </div>
