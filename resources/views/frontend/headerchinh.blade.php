@@ -43,7 +43,7 @@
                                         <div class="col-sm-1">
                                         </div>
                                         <div class="col-sm-6">
-                                            <div class="dropdown-item"><b>Giới thiệu chung</b>
+                                            <div class="dropdown-item"><b>Giới thiệu</b>
                                             </div>
                                             <hr style=" border-top: 3px groove #003366;">
                                             <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Thư ngỏ</a>
@@ -114,13 +114,13 @@
                                         <div class="dropdown-item"><b>tuyển sinh</b>
                                         </div>
                                         <hr style=" border-top: 3px groove #003366;">
-                                        <a class="dropdown-item" href="#">Sinh viên</a>
+                                        <a class="dropdown-item" href="https://www.hust.edu.vn/thong-tin-tuyen-sinh">Sinh viên</a>
                                         <hr>
-                                        <a class="dropdown-item" href="#">Thạc sỹ khoa học</a>
+                                        <a class="dropdown-item" href="https://www.hust.edu.vn/tuyen-sinh-cao-hoc">Thạc sỹ khoa học</a>
                                         <hr>
-                                        <a class="dropdown-item" href="#">Thạc sỹ kỹ thuật</a>
+                                        <a class="dropdown-item" href="https://www.hust.edu.vn/tuyen-sinh-cao-hoc">Thạc sỹ kỹ thuật</a>
                                         <hr>
-                                        <a class="dropdown-item" href="#">Nghiên cứu sinh</a>
+                                        <a class="dropdown-item" href="https://www.hust.edu.vn/tuyen-sinh-nghien-cuu-sinh">Nghiên cứu sinh</a>
                                     </div>
                                     <div class="col-sm-6">
                                         <img src="{{asset('index/assets/img/levels-of-study-jpeg.jpg')}}">
@@ -175,13 +175,13 @@
                                             <div class="dropdown-item"><b>Nghiên cứu</b>
                                             </div>
                                             <hr style=" border-top: 3px groove #003366;">
-                                            <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Sản phẩm
+                                            <a class="dropdown-item" href="#">Sản phẩm
                                                 nghiên cứu</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Lĩnh vực
+                                            <a class="dropdown-item" href="#">Lĩnh vực
                                                 nghiên cứu</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Đề tài
+                                            <a class="dropdown-item" href="#">Tác giả
                                                 nghiên cứu</a>
                                             <hr>
                                         </div>
@@ -198,9 +198,17 @@
                     </li>
                     <li class="nav-item">
                         <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown">
                                 Hợp tác
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown">
+                                Sinh viên
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                                 style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
@@ -209,27 +217,23 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-5">
-                                            <div class="dropdown-item"><b>Hợp tác</b>
+                                            <div class="dropdown-item"><b>Sinh viên</b>
                                             </div>
-                                            <hr style=" border-top: 3px groove #003366;">
-                                            <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Sản phẩm
-                                                nghiên cứu</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Lĩnh vực
-                                                nghiên cứu</a>
+                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">BCH LIÊN CHI ĐOÀN</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Đề tài
-                                                nghiên cứu</a>
+                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">BCH LIÊN CHI HỘI</a>
                                             <hr>
+                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">CÁC CÂU LẠC
+                                                BỘ</a>
+                                            <hr>
+                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">THỰC TẬP SINH</a>
                                         </div>
-
                                         <div class="col-sm-5">
-                                            <img
-                                                src="{{asset('index/assets/img/newsimages_small_dissertation_260215.jpg')}}">
+                                            <img src="{{asset('index/assets/img/Home-Study-Health-Tips-1.jpg')}}">
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </li>
@@ -249,23 +253,13 @@
                                             <div class="dropdown-item"><b>Cựu sinh viên</b>
                                             </div>
                                             <hr style=" border-top: 3px groove #003366;">
-                                            <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">BAN CỐ VẤN
-                                                HỌC TẬP</a>
+                                            <a class="dropdown-item" href="{{asset('https://alumni.hust.edu.vn/')}}">Cựu sinh viên của Trường</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">BAN CHẤP
-                                                HÀNH LCĐ</a>
+                                            <a class="dropdown-item" href="#">Cựu sinh viên của Viện</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">BAN CHẤP
-                                                HÀNH LCH</a>
-                                            <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">CÁC CÂU LẠC
-                                                BỘ</a>
-                                            <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">NGHIÊN CỨU
-                                                KHOA HỌC SINH VIÊN</a>
                                         </div>
                                         <div class="col-sm-5">
-                                            <img src="{{asset('index/assets/img/Home-Study-Health-Tips-1.jpg')}}">
+                                            <img src="{{asset('index/assets/img/c424c6f61fa2effcb6b3.jpg')}}">
                                         </div>
                                     </div>
                                 </div>
@@ -289,14 +283,13 @@
                                             <div class="dropdown-item"><b>Tài liệu</b>
                                             </div>
                                             <hr style=" border-top: 3px groove #003366;">
-                                            @foreach($loaitailieu as $loai)
-                                            <a class="dropdown-item" href="{{asset('/tai-lieu/'.$loai->url)}}">{!! $loai->ten !!}</a>
+                                            <a class="dropdown-item" href="https://ctt-daotao.hust.edu.vn/DisplayWeb/DisplayMenu?menu=31">Tài liệu dành cho sinh viên đại học</a>
                                             <hr>
-                                            @endforeach
-                                            <a class="dropdown-item" href="{{asset('su-kien')}}">VĂN BẢN QUY CHẾ ĐÀO
-                                                TẠO</a>
+                                            <a class="dropdown-item" href="https://ctt-daotao.hust.edu.vn/DisplayWeb/DisplayMenu?menu=42">Tài liệu dành cho học viên cao học</a>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('su-kien')}}">CỰU SINH VIÊN</a>
+                                            <a class="dropdown-item" href="https://ctt-daotao.hust.edu.vn/DisplayWeb/DisplayMenu?menu=42">Tài liệu dành cho nghiên cứu sinh</a>
+                                            <hr>
+                                            <a class="dropdown-item" href="#">Tài liệu dành cho cán bộ giảng viên</a>
                                             <hr>
                                         </div>
                                         <div class="col-sm-5">
