@@ -70,7 +70,7 @@
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown">
-                            Giới thiệu chung
+                            Giới thiệu
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
@@ -79,7 +79,7 @@
                                     <div class="col-sm-1">
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="dropdown-item"><b>Giới thiệu chung</b>
+                                        <div class="dropdown-item"><b>Giới thiệu</b>
                                         </div>
                                         <hr style=" border-top: 3px groove #003366;">
                                         <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Thư ngỏ</a>
