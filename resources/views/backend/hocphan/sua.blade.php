@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Sửa tin tức</title>
+    <title>Sửa học phần</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -46,7 +46,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <a class="btn btn-primary" href="{!! URL::route('admin.tintuc.list') !!}" role="button">Quay lại</a>
+                            <a class="btn btn-primary" href="{!! URL::route('admin.hocphan.list') !!}" role="button">Quay lại</a>
                             <a class="btn btn-primary" href="{{asset('trang-quan-ly')}}" role="button">Bảng điều
                                 khiển</a>
                         </div>
@@ -56,55 +56,40 @@
                                 <div class="row" style="margin-bottom:40px">
                                     <div class="col-xs-12">
                                         <div class="form-group">
-                                            <label>Tiêu đề</label>
-                                            <textarea class="form-control" rows="3" name="txtTTTitle" placeholder="Tiêu đề...">{!! $tintuc->tieude !!}</textarea>
+                                            <label>Tên học phần</label>
+                                            <textarea class="form-control" rows="3" name="txtHPName" placeholder="Tên học phần">{!! $hocphan->tenhocphan !!}</textarea>
                                             <div>
-                                                {!! $errors->first('txtTTTitle') !!}
+                                                {!! $errors->first('txtHPName') !!}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Chương trình đào tạo</label>
+                                            <div >
+                                            <?php 
+                                            $ct = DB::table('chuongtrinhdaotaos')->where('id',$hocphan->id_chuongtrinhdaotao)->first();
+                                            ?>
+                                            <select name="txtCTCode" id="input">
+                                                <option value="{{$hocphan->id_chuongtrinhdaotao}}">{!! $ct->tenchuongtrinh !!}</option>
+                                                @foreach($chuongtrinh as $item)
+                                                <option value="{{$item->id}}">{!! $item->tenchuongtrinh !!}</option>
+                                                @endforeach
+                                                </select>
+                                            </div>
+                                            <div>
+                                                {!! $errors->first('txtCTCode') !!}
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label>Nội dung</label>
-                                            <textarea class="form-control ckeditor" rows="3" name="txtTTConte" placeholder="Mô tả...">{!! $tintuc->noidung !!}</textarea>
-                                            <script type="text/javascript">CKEDITOR.replace('txtTTConte'); </script>
+                                            <textarea class="form-control ckeditor" rows="3" name="txtHPCont" placeholder="Nội dung">{!! $hocphan->noidung !!}</textarea>
+                                            <script type="text/javascript">CKEDITOR.replace('txtHPCont'); </script>
                                             <div>
-                                                {!! $errors->first('txtTTConte') !!}    
+                                                {!! $errors->first('txtHPCont') !!}    
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Ngày</label>
-                                            <input class="form-control" type="date"name="txtTTDate" value="{!! $tintuc->ngay !!}" />
-                                            <div>
-                                                {!! $errors->first('txtTTConte') !!}    
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Loại tin</label>
-                                            <div >
-                                            <select name="txtTTCate" id="input">
-                                                    @if($tintuc->loai == 0) 
-                                                        <option value="0">Tin tức</option>
-                                                        <option value="1">Sự kiện</option>
-                                                    @else
-                                                        <option value="1">Sự kiện</option>
-                                                        <option value="0">Tin tức</option>
-                                                    @endif
-
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Hình ảnh </label>
-                                            <br>
-                                            <img src="{!! asset('resources/upload/tintuc/'.$tintuc->hinhanh) !!}" class="img-responsive img-rounded" alt="Image" style="width: 150px; height: 200px;">
-                                            <input type="hidden" name="fImageCurrent" value="{!! $tintuc->hinhanh !!}">
-
-                                            <br>
-                                            <input type="file" name="fImage" >
                                         </div>
                                         
                                         <input type="submit" name="submit" value="Sửa" class="btn btn-primary">
-                                        <a href="{!! URL::route('admin.tintuc.list') !!}" class="btn btn-danger">Hủy bỏ</a>
+                                        <a href="{!! URL::route('admin.hocphan.list') !!}" class="btn btn-danger">Hủy bỏ</a>
                                     </div>
                                 </div>
                             </form>

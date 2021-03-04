@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Thêm tin tức</title>
+    <title>Thêm học phần</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -46,60 +46,47 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                        <a href="{!! URL::route('admin.tintuc.list') !!}" class="btn btn-danger">Quay lại</a>
+                        <a href="{!! URL::route('admin.hocphan.list') !!}" class="btn btn-danger">Quay lại</a>
                             <a class="btn btn-primary" href="{{asset('trang-quan-ly')}}" role="button">Bảng điều
                                 khiển</a>
                         </div>
                         <div class="body">
 
-                            <form action="{!! route('admin.tintuc.getAdd') !!}" method="POST"  enctype="multipart/form-data">
+                            <form action="{!! route('admin.hocphan.getAdd') !!}" method="POST"  enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="{!! csrf_token() !!}" />
                                 <div class="row" style="margin-bottom:40px">
                                     <div class="col-xs-12">
                                         <div class="form-group">
-                                            <label>Tiêu đề</label>
-                                            <textarea class="form-control" rows="3" name="txtTTTitle" placeholder="Tiêu đề..."> {!! old('txtTTTitle') !!}</textarea>
+                                            <label>Tên học phần</label>
+                                            <input class="form-control" rows="3" name="txtHPName" placeholder="Tên học phần">
                                             <div>
-                                                {!! $errors->first('txtTTTitle') !!}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Nội dung</label>
-                                            <textarea class="form-control ckeditor" rows="3" name="txtTTConte" placeholder="Nội dung..."> {!! old('txtTTConte') !!}</textarea>
-                                            <script type="text/javascript">CKEDITOR.replace('txtTTConte'); </script>
-                                            <div>
-                                                {!! $errors->first('txtTTConte') !!}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Ngày</label>
-                                            <input type="date"name="txtTTDate" value="{!! old('txtTTDate') !!}" placeholder="Ngày..." />
-                                            <div>
-                                                {!! $errors->first('txtTTDate') !!}
+                                                {!! $errors->first('txtHPName') !!}
                                             </div>
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label>Chọn loại tin</label>
+                                            <label>Chọn chương trình đào tạo</label>
                                             <div >
-                                                <select name="txtTTCate" id="input">
-                                                    <option value="0">Tin tức</option>
-                                                    <option value="1">Sự kiện</option>
+                                                <select name="txtCTCode" id="input">
+                                                @foreach($chuongtrinh as $item)
+                                                    <option value="{{$item->id}}">{!! $item->tenchuongtrinh !!}</option>
+                                                @endforeach
                                                 </select>
                                             </div>
                                             <div>
-                                                {!! $errors->first('txtTTCate') !!}
+                                                {!! $errors->first('txtCTCode') !!}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label>Hình ảnh </label>
-                                            <input type="file" name="txtTTImage" value="{!! old('txtTTImage') !!}" >
+                                            <label>Nội dung</label>
+                                            <textarea class="form-control ckeditor" rows="3" name="txtHPCont" placeholder="Nội dung..."> {!! old('txtHPCont') !!}</textarea>
+                                            <script type="text/javascript">CKEDITOR.replace('txtHPCont'); </script>
                                             <div>
-                                                {!! $errors->first('txtTTImage') !!}
+                                                {!! $errors->first('txtHPCont') !!}
                                             </div>
                                         </div>
                                         <input type="submit" name="submit" value="Thêm" class="btn btn-info">
-                                        <a href="{{!! URL::route('admin.tintuc.list') !!}}" class="btn btn-danger">Hủy bỏ</a>
+                                        <a href="{!! URL::route('admin.hocphan.list') !!}" class="btn btn-danger">Hủy bỏ</a>
                                     </div>
                                 </div>
                             </form>

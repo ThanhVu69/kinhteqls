@@ -63,7 +63,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="trang-chu">SEM - Viện Kinh tế và Quản lý</a>
+                <a class="navbar-brand" href="{{URL::to('trang-chu')}}">SEM - Viện Kinh tế và Quản lý</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -211,6 +211,13 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <a href="{{asset('daotaotiensy')}}"><button class="button" style="background-color: #b94b29;">Đào tạo tiến sỹ</button></a>
                 </div> 
+        
+            </div>
+            <br><br>
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <a href="{!! URL::route('admin.hocphan.list') !!}"><button class="button" style="background-color: #f44336;">Học phần</button></a>
+                </div>
             </div>
             <br><br>
             <!-- #END# Widgets -->

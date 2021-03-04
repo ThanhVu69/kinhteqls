@@ -66,6 +66,7 @@
     </section>
     <hr><br><br><br><br><br>
     <!-- Footer -->
+    
     @include('frontend.footer')
     <!-- Bootstrap core JavaScript -->
     <script src="{{asset('trangphu/vendor/jquery/jquery.min.js')}}"></script>

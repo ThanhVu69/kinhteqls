@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
+    <link href="{{asset('index/css/accordion.css')}}" rel="stylesheet">
 
 </head>
 
@@ -31,6 +32,19 @@
             </div>
         </div>
         <div class="row">
+        <ul class="a-container">
+        <!-- item01 -->
+        @foreach($hihi as $item)
+        <li class="a-items">
+            <input type="radio" name="ac" id="{{$item->id}}"/>
+            <label for="{{$item->id}}">{!! $item->tenhocphan !!}</label>
+            <div class="a-content">
+            <h2>{!! $item->tenhocphan !!}</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores possimus sequi non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis deleniti deserunt! Voluptate qui excepturi architecto.</p>
+            </div>
+        </li>
+        @endforeach
+    </ul>
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->
@@ -47,6 +61,7 @@
         <!-- /.row -->
     </div>
     <!-- /.container -->
+
     <hr>
     <!-- Footer -->
     @include('frontend.footer')

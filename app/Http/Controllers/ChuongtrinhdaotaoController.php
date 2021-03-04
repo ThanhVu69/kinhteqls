@@ -85,6 +85,7 @@ class ChuongtrinhdaotaoController extends Controller
     {
         $chuongtrinhdaotao = chuongtrinhdaotaos::find($id);
         $chuongtrinhdaotao->delete();
+        DB::table('hocphans')->where('id_chuongtrinhdaotao',$id)->delete();
         echo"<script>
     alert('Xóa thành công!');
     window.location = ' ".url('chuongtrinhdaotao')."'
