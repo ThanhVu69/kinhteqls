@@ -201,7 +201,8 @@ class BomonController extends Controller
     {
         $bomon = bomons::all();
         $hocphandamnhan = bomons::find($id);
-        return view('frontend.bomon.hocphandamnhan',compact('hocphandamnhan','bomon'));
+        $hihi = DB::table('chuongtrinhdaotaos')->join('hocphans','chuongtrinhdaotaos.id','=','hocphans.id_chuongtrinhdaotao')->get();
+        return view('frontend.bomon.hocphandamnhan',compact('hocphandamnhan','bomon','hihi'));
     }
     public function cosovatchat($id)
     {

@@ -210,6 +210,17 @@ Route::group(['prefix' => 'loaitailieu'], function() {
     Route::get('sua/{id}',['as'=>'admin.loaitailieu.getEdit','uses'=>'LoaitailieuController@getEdit']);
     Route::post('sua/{id}',['as'=>'admin.loaitailieu.postEdit','uses'=>'LoaitailieuController@postEdit']);
 });
+
+// học phần
+Route::group(['prefix' => 'hocphan'], function() {
+    Route::get('danhsach',['as'=>'admin.hocphan.list','uses'=>'HocphanController@getList']);
+    Route::get('them',['as'=>'admin.hocphan.getAdd','uses'=>'HocphanController@getAdd']);
+    Route::post('them',['as'=>'admin.hocphan.postAdd','uses'=>'HocphanController@postAdd']);
+    Route::get('xoa/{id}',['as'=>'admin.hocphan.getDelete','uses'=>'HocphanController@getDelete']);
+    Route::get('sua/{id}',['as'=>'admin.hocphan.getEdit','uses'=>'HocphanController@getEdit']);
+    Route::post('sua/{id}',['as'=>'admin.hocphan.postEdit','uses'=>'HocphanController@postEdit']);
+});
+
 // tài liệu web
 Route::get('tai-lieu','AdminController@tlweb');
 Route::get('tai-lieu/{url}','AdminController@xemtlloai');

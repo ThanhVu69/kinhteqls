@@ -22,8 +22,6 @@
             <a class="navbar-brand js-scroll-trigger" href="#page-top"><img
                     src="{{asset('index/assets/img/logo_hust.png')}}" style="position: center; width:auto; height: 70px"
                     alt="" /></a>
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{{asset('index/assets/img/logo.png')}}"
-                    style="position: center; width:auto; height: 60px" alt="" /></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" href="#page-top" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -36,35 +34,7 @@
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown">
-                                Đào tạo
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
-                                style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
-                                <div class="row">
-                                    <div class="col-sm-2">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="dropdown-item"><b>đào tạo</b>
-                                        </div>
-                                        <hr style=" border-top: 3px groove #003366;">
-                                        <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Đào tạo đại
-                                            học</a>
-                                        <hr>
-                                        <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Đào tạo sau
-                                            đại học</a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <img src="{{asset('index/assets/img/levels-of-study-jpeg.jpg')}}">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown">
-                                Giới thiệu chung
+                                Giới thiệu
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                                 style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
@@ -103,7 +73,7 @@
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown">
-                                Nghiên cứu - Hợp tác
+                                Tin tức - sự kiện
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                                 style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
@@ -112,7 +82,95 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-5">
-                                            <div class="dropdown-item"><b>Nghiên cứu - Hợp tác</b>
+                                            <div class="dropdown-item"><b>Tin tức - sự kiện</b>
+                                            </div>
+                                            <hr style=" border-top: 3px groove #003366;">
+                                            <a class="dropdown-item" href="{{asset('tin-tuc')}}">Tin tức</a>
+                                            <hr>
+                                            <a class="dropdown-item" href="{{asset('su-kien')}}">Sự kiện</a>
+                                            <hr>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <img src="{{asset('index/assets/img/bk.jpg')}}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown">
+                                Tuyển sinh
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="dropdown-item"><b>tuyển sinh</b>
+                                        </div>
+                                        <hr style=" border-top: 3px groove #003366;">
+                                        <a class="dropdown-item" href="#">Sinh viên</a>
+                                        <hr>
+                                        <a class="dropdown-item" href="#">Thạc sỹ khoa học</a>
+                                        <hr>
+                                        <a class="dropdown-item" href="#">Thạc sỹ kỹ thuật</a>
+                                        <hr>
+                                        <a class="dropdown-item" href="#">Nghiên cứu sinh</a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="{{asset('index/assets/img/levels-of-study-jpeg.jpg')}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown">
+                                Đào tạo
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="dropdown-item"><b>đào tạo</b>
+                                        </div>
+                                        <hr style=" border-top: 3px groove #003366;">
+                                        <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Đào tạo đại
+                                            học</a>
+                                        <hr>
+                                        <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Đào tạo sau
+                                            đại học</a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="{{asset('index/assets/img/levels-of-study-jpeg.jpg')}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown">
+                                Nghiên cứu
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="dropdown-item"><b>Nghiên cứu</b>
                                             </div>
                                             <hr style=" border-top: 3px groove #003366;">
                                             <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Sản phẩm
@@ -140,7 +198,7 @@
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown">
-                                Học sinh - Sinh viên
+                                Hợp tác
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                                 style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
@@ -149,7 +207,44 @@
                                         <div class="col-sm-2">
                                         </div>
                                         <div class="col-sm-5">
-                                            <div class="dropdown-item"><b>Học sinh - sinh viên</b>
+                                            <div class="dropdown-item"><b>Hợp tác</b>
+                                            </div>
+                                            <hr style=" border-top: 3px groove #003366;">
+                                            <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Sản phẩm
+                                                nghiên cứu</a>
+                                            <hr>
+                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Lĩnh vực
+                                                nghiên cứu</a>
+                                            <hr>
+                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Đề tài
+                                                nghiên cứu</a>
+                                            <hr>
+                                        </div>
+
+                                        <div class="col-sm-5">
+                                            <img
+                                                src="{{asset('index/assets/img/newsimages_small_dissertation_260215.jpg')}}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown">
+                                Cựu sinh viên
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="dropdown-item"><b>Cựu sinh viên</b>
                                             </div>
                                             <hr style=" border-top: 3px groove #003366;">
                                             <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">BAN CỐ VẤN
@@ -169,36 +264,6 @@
                                         </div>
                                         <div class="col-sm-5">
                                             <img src="{{asset('index/assets/img/Home-Study-Health-Tips-1.jpg')}}">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown">
-                                Tin tức - sự kiện
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
-                                style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="dropdown-item"><b>Tin tức - sự kiện</b>
-                                            </div>
-                                            <hr style=" border-top: 3px groove #003366;">
-                                            <a class="dropdown-item" href="{{asset('tin-tuc')}}">Tin tức</a>
-                                            <hr>
-                                            <a class="dropdown-item" href="{{asset('su-kien')}}">Sự kiện</a>
-                                            <hr>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <img src="{{asset('index/assets/img/bk.jpg')}}">
                                         </div>
                                     </div>
                                 </div>
