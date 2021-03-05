@@ -144,6 +144,8 @@
                                         <div class="dropdown-item"><b>đào tạo</b>
                                         </div>
                                         <hr style=" border-top: 3px groove #003366;">
+                                        <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Quy chế đào tạo</a>
+                                        <hr>
                                         <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Đào tạo đại
                                             học</a>
                                         <hr>

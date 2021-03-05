@@ -140,10 +140,6 @@ Route::get('chi-tiet-giang-vien/{id}','GiangvienController@chitietgiangvien');
 //Slide
 Route::get('slide','SlideController@slide',function(){
 })->middleware('adminLogin');
-Route::get('themslide','SlideController@getthemslide',function(){
-})->middleware('adminLogin');
-Route::post('themslide','SlideController@postthemslide',function(){
-})->middleware('adminLogin');
 Route::get('suaslide/{id}','SlideController@getsuaslide',function(){
 })->middleware('adminLogin');
 Route::post('suaslide/{id}','SlideController@postsuaslide',function(){

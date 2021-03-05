@@ -51,7 +51,6 @@
                             <a class="btn btn-primary" href="{{asset('trang-quan-ly')}}" role="button">Bảng điều khiển</a>
                         </div>
                         <div class="body">
-                        <a href="themslide" class="btn btn-info">Thêm Slide</a><br><br>
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                     <thead>
@@ -67,9 +66,9 @@
                                             <td><img style="width: auto; height:50px;" src="/upload/slide/{{$hh->anh}}" /></td>
                                             <td>{{$hh->trichdan}}</td>
                                             <td>
-                                            <a href="xoaslide/{{$hh->id}}" 
-                                            onclick="return confirm('Bạn có chắc chắn muốn xóa?')" 
-                                            class="btn btn-danger btn-sm">Xóa</a>
+                                            <a href="suaslide/{{$hh->id}}" 
+                                            onclick="return confirm('Bạn có chắc chắn muốn sửa?')" 
+                                            class="btn btn-info btn-sm">Sửa</a>
                                             </td>
                                         </tr>
                                     @endforeach
