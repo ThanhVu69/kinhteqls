@@ -52,19 +52,19 @@
                                         <div class="dropdown-item"><b>Giới thiệu</b>
                                         </div>
                                         <hr style=" border-top: 3px groove #003366;">
-                                        <a class="dropdown-item" href="{{asset('gioi-thieu-chung1')}}">Thư ngỏ</a>
+                                        <a class="dropdown-item" href="{{asset('thu-ngo')}}">Thư ngỏ</a>
                                         <hr>
-                                        <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Lịch sử
+                                        <a class="dropdown-item" href="{{asset('lich-su-hinh-thanh')}}">Lịch sử
                                             hình thành và phát triển</a>
                                         <hr>
-                                        <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Cơ cấu tổ
+                                        <a class="dropdown-item" href="{{asset('co-cau-to-chuc')}}">Cơ cấu tổ
                                             chức</a>
-                                        <hr>
+                                        <!-- <hr>
                                         <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Cán bộ và
                                             giảng viên</a>
                                         <hr>
                                         <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">Cơ sở vật
-                                            chất</a>
+                                            chất</a> -->
                                     </div>
                                     <div class="col-sm-5">
                                         <img src="{{asset('index/assets/img/Introduction.png')}}">

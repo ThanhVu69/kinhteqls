@@ -83,6 +83,21 @@ class AdminController extends Controller
         return view('backend.layout');
     }
 //Giới thiệu chung về viện
+    public function thungo()
+    {
+        $gioithieu= lienhes::all();
+        return view('frontend.gioithieu.thungo',['gioithieu'=>$gioithieu]);
+    }
+    public function lichsu()
+    {
+        $gioithieu= lienhes::all();
+        return view('frontend.gioithieu.lichsuhinhthanh',['gioithieu'=>$gioithieu]);
+    }
+    public function cocau()
+    {
+        $gioithieu= lienhes::all();
+        return view('frontend.gioithieu.cocau',['gioithieu'=>$gioithieu]);
+    }
     public function gioithieu()
     {
         $gioithieu= lienhes::all();

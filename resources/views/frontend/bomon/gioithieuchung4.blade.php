@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Giới thiệu chung</title>
+    <title>Giới thiệu</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
@@ -34,9 +34,9 @@
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->
-                <h5 class="mt-4" style="color: #9c1010;">GIỚI THIỆU CHUNG</h5>
+                <!-- <h5 class="mt-4" style="color: #9c1010;">GIỚI THIỆU</h5>
                 <small>{{ $gioithieuchung->tenbomon }}</small>
-                <hr>
+                <hr> -->
                 <div style="font-size: 13px;">
                 <!-- Post Content -->
                 <p style="text-align: right;">

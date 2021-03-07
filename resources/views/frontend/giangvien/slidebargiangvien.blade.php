@@ -1,14 +1,14 @@
 <!-- Sidebar -->
 <div class="col-md-4">
     <!-- Danh mục -->
-    <div class="card my-4" style="font-size: 13px;">
-        <div class="card" style="width: 18rem;">
-            <div class="card-header" style="background-color: #003a6a; color: #fff">
-                Bộ môn - Trung tâm
+    <div class="card my-3" style="font-size: 13px;">
+        <div class="card" style="width: 21.5rem;">
+            <div class="card-header">
+                <b>BỘ MÔN - TRUNG TÂM</b>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a style="color: #000" href="{{asset('bo-mon-trung-tam')}}">Bộ môn-Trung
-                        tâm</a></li>
+            <ul class="list-group list-group-flush" style=" border-top: 3px groove #003366;">
+                <li class="list-group-item"><a style="color: #000; font-size: 15px;"
+                        href="{{asset('bo-mon-trung-tam')}}">Giới thiệu</a></li>
                 @foreach($bmon as $ct)
                 <div class="dropdown">
                     <a style="color: #000" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -25,7 +25,7 @@
                         <a style="color: #000" class="dropdown-item"
                             href="{{asset('huong-nghien-cuu')}}/{{$ct->id}}">Các hướng
                             nghiên cứu</a>
-                        <a style="color: #000" class="dropdown-item"
+                        <!-- <a style="color: #000" class="dropdown-item"
                             href="{{asset('cong-trinh-khoa-hoc')}}/{{$ct->id}}">Các
                             công trình khoa
                             học</a></li>
@@ -37,22 +37,12 @@
                             chất</a>
                         <a style="color: #000" class="dropdown-item"
                             href="{{asset('sach-da-xuat-ban')}}/{{$ct->id}}">Sách đã
-                            xuất bản</a>
+                            xuất bản</a> -->
                     </div>
                 </div>
                 @endforeach
             </ul>
         </div>
         <br>
-        <!-- Preview Image -->
-        <img class="img-fluid rounded" src="{{asset('index/assets/img/bk.jpg')}}" alt="">
-        <!-- Post Content -->
-        <!-- Side Widget -->
-        <div class="card my-4" style="font-size: 13px;">
-            <h5 class="card-header">Side Widget</h5>
-            <div class="card-body">
-                You can put anything you want inside of these side widgets. They are easy to use, and feature
-                the new Bootstrap 4 card containers!
-            </div>
-        </div>
+        
     </div>

@@ -55,7 +55,7 @@ class SlideController extends Controller
                     $anh = Str::random(4)."_".$name;
                 }
                 $file->move("upload/slide",$anh);
-                unlink("upload/slide/".$suaslide->anh);
+                // unlink("upload/slide/".$suaslide->anh);
                 $suaslide->anh = $anh;
             }
             

@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Chuẩn đầu ra</title>
+    <title>Chương trình đào tạo</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
+    <link href="{{asset('index/css/accordion.css')}}" rel="stylesheet">
 
 </head>
 
@@ -34,14 +35,38 @@
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->
-                <h5 class="mt-4" style="color: #9c1010;">CHUẨN ĐẦU RA</h5>
-                <small>{{ $chuandaura->tenchuongtrinh }}</small>
-                <hr>
+                <!-- <h5 class="mt-4" style="color: #9c1010;">{{ $chuandaura->tenchuongtrinh }}</h5> -->
+                <!-- <small>{{ $chuandaura->tenchuongtrinh }}</small> -->
+                <hr style=" groove #919191; border-top: 3px groove #003366;">
                 <div style="font-size: 13px;">
-                <p style="text-align: right;">
-                {!! $chuandaura->chuandaura !!}<br><br><br><br><br><br><br><br>
-                </p>
-            </div></div>
+                    <p style="text-align: right;">
+                        {!! $chuandaura->chuandaura !!}
+                        Xem danh mục học phần <a style="color: #007bff;"
+                            href="{!! $chuandaura->danhmucchuongtrinh !!}">tại đây</a>
+                    </p>
+                    <p style="text-align: right;">
+                    <ul class="a-container">
+                        <!-- item01 -->
+                        @foreach($hihi as $item)
+                        <li class="a-items">
+                            <input type="radio" name="ac" id="{{$item->id_chuongtrinhdaotao}}" />
+                            <label for="{{$item->id_chuongtrinhdaotao}}">{!! $item->tenhocphan !!}</label>
+                            <div class="a-content">
+                                <h2>{!! $item->tenhocphan !!}</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores
+                                    possimus sequi
+                                    non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis
+                                    deleniti
+                                    deserunt! Voluptate qui excepturi architecto.</p>
+                            </div>
+                        </li>
+                        @endforeach
+                    </ul>
+                    <!-- Post Content Column -->
+                    </p>
+                    <br><br><br><br><br><br><br><br>
+                </div>
+            </div>
             @include('frontend.chuongtrinhdaotao.slidebarchuongtrinhdaotao')
         </div>
         <!-- /.row -->

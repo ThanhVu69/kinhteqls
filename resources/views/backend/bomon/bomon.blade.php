@@ -58,13 +58,13 @@
                                         <tr >
                                             <th>Ảnh nền</th>
                                             <th>Tên bộ môn</th>
-                                            <th>Giới thiệu chung</th>
+                                            <th>Giới thiệu</th>
                                             <th>Hướng nghiên cứu</th>
-                                            <th>Công trình khoa học</th>
+                                            <!-- <th>Công trình khoa học</th>
                                             <th>Sách đã xuất bản</th>
                                             <th>Học phần đảm nhận</th>
                                             <th>Cơ sở vật chất</th>
-                                            <th>Cập nhật ngày</th>
+                                            <th>Cập nhật ngày</th> -->
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -73,14 +73,14 @@
                                     @foreach($bomon as $hh)
                                         <tr>
                                             <td><img style="width: auto; height:50px;" src="upload/bomon/{{$hh->anh}}" /></td>
-                                            <td>{!! $hh->tenbomon !!}</td>
-                                            <td>{!! substr($hh->gioithieuchung,0,500) !!}</td>
-                                            <td>{!! substr($hh->huongnghiencuu,0,500) !!}</td>
-                                            <td>{!! substr($hh->congtrinhkhoahoc,0,10) !!}</td>
-                                            <td>{!! substr($hh->sachdaxuatban,0,10) !!}</td>
-                                            <td>{!! substr($hh->hocphandamnhan,0,10) !!}</td>
-                                            <td>{!! substr($hh->cosovatchat,0,10) !!}</td>
-                                            <td>{!! $hh->updated_at !!}</td>
+                                            <td>{{ $hh->tenbomon }}</td>
+                                            <td>{{ $hh->gioithieuchung }}</td>
+                                            <td>{{ $hh->huongnghiencuu }}</td>
+                                            <!-- <td>{{ $hh->congtrinhkhoahoc }}</td>
+                                            <td>{{ $hh->sachdaxuatban }}</td>
+                                            <td>{{ $hh->hocphandamnhan }}</td>
+                                            <td>{{ $hh->cosovatchat }}</td>
+                                            <td>{{ $hh->updated_at }}</td> -->
                                             <td>
                                             <a href="suabomon/{{$hh->id}}" 
                                             onclick="return confirm('Bạn có chắc chắn muốn sửa?')" 
