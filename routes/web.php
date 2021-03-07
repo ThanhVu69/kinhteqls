@@ -216,6 +216,15 @@ Route::group(['prefix' => 'hocphan'], function() {
     Route::get('sua/{id}',['as'=>'admin.hocphan.getEdit','uses'=>'HocphanController@getEdit']);
     Route::post('sua/{id}',['as'=>'admin.hocphan.postEdit','uses'=>'HocphanController@postEdit']);
 });
+//Ban chấp hàng
+Route::group(['prefix' => 'banchaphanh'], function() {
+    Route::get('danhsach',['as'=>'admin.banchaphanh.list','uses'=>'BanchaphanhController@getList']);
+    Route::get('them',['as'=>'admin.banchaphanh.getAdd','uses'=>'BanchaphanhController@getAdd']);
+    Route::post('them',['as'=>'admin.banchaphanh.postAdd','uses'=>'BanchaphanhController@postAdd']);
+    Route::get('xoa/{id}',['as'=>'admin.banchaphanh.getDelete','uses'=>'BanchaphanhController@getDelete']);
+    Route::get('sua/{id}',['as'=>'admin.banchaphanh.getEdit','uses'=>'BanchaphanhController@getEdit']);
+    Route::post('sua/{id}',['as'=>'admin.banchaphanh.postEdit','uses'=>'BanchaphanhController@postEdit']);
+});
 
 // tài liệu web
 Route::get('tai-lieu','AdminController@tlweb');
