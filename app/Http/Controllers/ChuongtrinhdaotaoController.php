@@ -12,6 +12,7 @@ use Alert;
 use RealRashid\SweetAlert\Facades\Aler;
 use App\User;
 use App\chuongtrinhdaotaos;
+use App\hocphans;
 use App\daotaodaihocs;
 use Illuminate\Http\Request;
 
@@ -32,9 +33,9 @@ class ChuongtrinhdaotaoController extends Controller
     {
         $validator = Validator::make($request->all(),[
             'tenchuongtrinh'=>'required|min:10',
-            'chuandaura'=>'required|min:10',
-            'quydinhdaotao'=>'required|min:10',
-            'danhmucchuongtrinh'=>'required|min:10',
+            // 'chuandaura'=>'required|min:10',
+            // 'quydinhdaotao'=>'required|min:10',
+            // 'danhmucchuongtrinh'=>'required|min:10',
             ]);
         if ($validator->fails())
         {
@@ -97,7 +98,9 @@ class ChuongtrinhdaotaoController extends Controller
         $daotaodaihoc = daotaodaihocs::all();
         $chuongtrinhdaotao = chuongtrinhdaotaos::all();
         $chuandaura= chuongtrinhdaotaos::find($id);
-        return view('frontend.chuongtrinhdaotao.chuandaura',compact('chuandaura','chuongtrinhdaotao','daotaodaihoc'));
+        $hihi = DB::table('chuongtrinhdaotaos')->join('hocphans','chuongtrinhdaotaos.id','=','hocphans.id_chuongtrinhdaotao')->get();
+        // dd($hihi);
+        return view('frontend.chuongtrinhdaotao.chuandaura',compact('chuandaura','chuongtrinhdaotao','daotaodaihoc','hihi'));
     }
     public function quydinhdaotao($id)
     {

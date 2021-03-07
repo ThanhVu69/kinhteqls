@@ -19,9 +19,9 @@ input[type=radio] {
   display: block;
   position: relative;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 5px 15px;
   color: #aaa;
   background-color: #eee;
   border-bottom: 1px solid #ddd;

@@ -18,13 +18,21 @@ Route::get('/', function () {
 Route::get('dang-nhap-trang-quan-ly', 'AdminController@getLog');
 Route::get('trang-quan-ly', 'AdminController@homead',function(){
 })->middleware('adminLogin');
+
 //Giới thiệu chung về viện
+Route::get('thu-ngo', 'AdminController@thungo',function(){
+})->middleware('adminLogin');
+Route::get('lich-su-hinh-thanh', 'AdminController@lichsu',function(){
+})->middleware('adminLogin');
+Route::get('co-cau-to-chuc', 'AdminController@cocau',function(){
+})->middleware('adminLogin');
 Route::get('gioithieu', 'AdminController@gioithieu',function(){
 })->middleware('adminLogin');
 Route::get('suagioithieu/{id}','AdminController@getsuagioithieu',function(){
 })->middleware('adminLogin');
 Route::post('suagioithieu/{id}','AdminController@postsuagioithieu',function(){
 })->middleware('adminLogin');
+
 //Mô hình đào tạo
 Route::get('mohinhdaotao', 'MohinhdaotaoController@mohinhdaotao',function(){
 })->middleware('adminLogin');
@@ -33,6 +41,7 @@ Route::get('suamohinhdaotao/{id}','MohinhdaotaoController@getsuamohinhdaotao',fu
 Route::post('suamohinhdaotao/{id}','MohinhdaotaoController@postsuamohinhdaotao',function(){
 })->middleware('adminLogin');
 Route::get('mo-hinh-dao-tao','MohinhdaotaoController@mohinhdaotaoindex');
+
 //Đào tạo đại học
 Route::get('gioithieuchung', 'DaotaodaihocController@gioithieuchung',function(){
 })->middleware('adminLogin');

@@ -58,7 +58,7 @@
                                         <tr >
                                             <th>Tên chương trình</th>
                                             <th>Chuẩn đầu ra</th>
-                                            <th>Quy định đào tạo</th>
+                                            <!-- <th>Quy định đào tạo</th> -->
                                             <th style="width:60px">Danh mục chương trình</th>
                                             <th>Cập nhật ngày</th>
                                             <th></th>
@@ -68,11 +68,11 @@
                                     <tbody>
                                     @foreach($chuongtrinhdaotao as $hh)
                                         <tr>
-                                            <td>{!! $hh->tenchuongtrinh !!}</td>
-                                            <td>{!! substr($hh->chuandaura,0,500) !!}</td>
-                                            <td>{!! substr($hh->quydinhdaotao,0,500) !!}</td>
-                                            <td>{!! substr($hh->danhmucchuongtrinh,0,10) !!}</td>
-                                            <td>{!! $hh->updated_at !!}</td>
+                                            <td>{{ $hh->tenchuongtrinh }}</td>
+                                            <td >{{ $hh->chuandaura }}</td>
+                                            <!-- <td>{{ $hh->quydinhdaotao}}</td> -->
+                                            <td>{{ $hh->danhmucchuongtrinh }}</td>
+                                            <td>{{ $hh->updated_at }}</td>
                                             <td>
                                             <a href="suachuongtrinhdaotao/{{$hh->id}}" 
                                             onclick="return confirm('Bạn có chắc chắn muốn sửa?')" 

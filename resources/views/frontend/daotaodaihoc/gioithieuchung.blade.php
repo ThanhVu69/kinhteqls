@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Giới thiệu chung</title>
+    <title>Đào tạo đại học</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
@@ -15,68 +15,40 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
-    <link href="{{asset('index/css/daotao.css')}}" rel="stylesheet">
+
 </head>
 
-<body style="background-color:#f8f8f8">
-    @include('frontend.header')<br><br><br><br><br>
-    
-    <section class="page-section" id="tailieu">
-        <br><br>
-        <div>
-            <div class="col-lg-12">
-                <h5 class="mt-4" style="color: #9c1010;">GIỚI THIỆU CHUNG</h5>
-            </div>
-            <div style=" border-top: 3px groove #003366;">
-                <br><br>
-                <div class="cardz">
-                    <div class="row ">
-                        <div class="col-md-8">
-                            <img src="{{asset('index/assets/img/-1600159227042208144611.jpg')}}">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card-body">
-                                <p class="card-text" style="font-size: 13px; color:#000;"><b>ĐÀO TẠO ĐẠI HỌC</b></p>
-                                <hr style=" border-top: 3px groove #003366;">
-                                @foreach($daotaodaihoc as $dt)
-                                <a href="{{$dt->bieudokehoach}}">
-                                    <p class="card-text" style="font-size: 13px; color:#003366;">Biểu đồ kế hoạch</p>
-                                </a>
-                                @endforeach
-                                <hr>
-                                <a href="{{asset('gioi-thieu-chung1')}}">
-                                    <p class="card-text" style="font-size: 13px; color:#003366;">Giới thiệu chung</p>
-                                </a>
-                                <hr style=" groove #919191; border-top: 3px groove #003366;">
-                                <p class="card-text" style="font-size: 13px; color:#000;"><b>CÁC CHƯƠNG TRÌNH ĐÀO
-                                        TẠO</b></p>
-                                @foreach($chuongtrinhdaotao as $ct)
-                                <div class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" style="font-size: 13px; color:#003366;">
-    
-                                            {{$ct->tenchuongtrinh}}
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a style="color: #000" class="dropdown-item"
-                                            href="{{asset('chuan-dau-ra')}}/{{$ct->id}}">Chuẩn
-                                            đầu ra</a>
-                                        <a style="color: #000" class="dropdown-item"
-                                            href="{{asset('quy-dinh-dao-tao')}}/{{$ct->id}}">Quy định đào tạo</a>
-                                        <a style="color: #000" class="dropdown-item"
-                                            href="{{$ct->danhmucchuongtrinh}}">Danh mục chương
-                                            trình</a>
-                                    </div>
-                                </div>
-                                @endforeach
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
+<body>
+    @include('frontend.header')
+    <!-- Page Content -->
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="width:auto; height:auto;" src="{{asset('index/assets/img/dai-hoc-bach-khoa.jpg')}}"
+                        class="d-block w-1" alt="...">
                 </div>
             </div>
-    </section>
-    <hr><br><br><br><br><br>
+        </div>
+        <div class="row">
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+                <!-- Title -->
+                <!-- <h5 class="mt-4" style="color: #9c1010;">CHUẨN ĐẦU RA</h5>
+                <hr> -->
+                <div style="font-size: 13px;">
+                <p style="text-align: right;">
+                @foreach($daotaodaihoc as $dt)
+                {!! $dt->gioithieuchung !!}<br><br><br><br><br><br><br><br>
+                @endforeach
+                </p>
+            </div></div>
+            @include('frontend.daotaodaihoc.slidebardaotaodaihoc')
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <hr>
     <!-- Footer -->
     @include('frontend.footer')
     <!-- Bootstrap core JavaScript -->
