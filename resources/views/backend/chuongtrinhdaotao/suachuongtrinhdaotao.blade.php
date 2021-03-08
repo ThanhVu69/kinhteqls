@@ -74,6 +74,22 @@
                                             <input required type="text" name="danhmucchuongtrinh" value="{{$chuongtrinhdaotao->danhmucchuongtrinh}}"
                                             class="form-control">
                                         </div>
+                                        <div class="form-group">
+                                        <label>Giáo dục đại cương</label>
+                                            <textarea name="daicuong" class="form-control ckeditor">{{$chuongtrinhdaotao->daicuong}}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                        <label>Cơ sở ngành</label>
+                                            <textarea name="cosonganh" class="form-control ckeditor">{{$chuongtrinhdaotao->cosonganh}}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                        <label>Kiến thức bổ sung</label>
+                                            <textarea name="kienthucbosung" class="form-control ckeditor">{{$chuongtrinhdaotao->kienthucbosung}}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                        <label>Tự chọn tự do</label>
+                                            <textarea name="tuchon" class="form-control ckeditor">{{$chuongtrinhdaotao->tuchon}}</textarea>
+                                        </div>
                                         <input type="submit" name="submit" value="Sửa" class="btn btn-primary">
                                         <a href="{{asset('chuongtrinhdaotao')}}" class="btn btn-danger">Hủy bỏ</a>
                                     </div>

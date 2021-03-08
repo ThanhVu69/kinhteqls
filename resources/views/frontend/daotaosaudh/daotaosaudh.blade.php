@@ -61,11 +61,11 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card-body">
-                                <p class="card-text" style="font-size: 13px; color:#000;"><b>ĐÀO TẠO SAU ĐẠI HỌC</b></p>
+                                <!-- <p class="card-text" style="font-size: 13px; color:#000;"><b>ĐÀO TẠO SAU ĐẠI HỌC</b></p>
                                 <hr style=" border-top: 3px groove #003366;">
-                                <!-- <a href="{{asset('dao-tao-sau-dai-hoc')}}">
+                                <a href="{{asset('dao-tao-sau-dai-hoc')}}">
                                     <p class="card-text" style="font-size: 13px; color:#003366;">Giới thiệu</p>
-                                </a> -->
+                                </a>
                                 <br>
                                 <a href="{{asset('danh-sach-luan-van')}}">
                                     <p class="card-text" style="font-size: 13px; color:#003366;">Danh sách luận văn cao
@@ -81,7 +81,7 @@
                                     <p class="card-text" style="font-size: 13px; color:#003366;">Danh sách tạp chí/ Hội
                                         nghị khoa học</p>
                                 </a>
-                                <br>
+                                <br> -->
                                 <hr style=" groove #919191; border-top: 3px groove #003366;">
                                 <p class="card-text" style="font-size: 13px; color:#000;"><b>CÁC CHƯƠNG TRÌNH ĐÀO
                                         TẠO</b></p>
@@ -95,9 +95,9 @@
                                         <a style="color: #000" class="dropdown-item"
                                             href="{{asset('dao-tao-thac-sy')}}">Giới thiệu
                                            </a>
-                                        <a style="color: #000" class="dropdown-item"
+                                        <!-- <a style="color: #000" class="dropdown-item"
                                             href="{{asset('chuan-dau-ra')}}">Chuẩn đầu ra của
-                                            chương trình</a>
+                                            chương trình</a> -->
                                         <a style="color: #000" class="dropdown-item" href="{{asset('doi-tuong')}}">Đối
                                             tượng tuyển
                                             sinh</a>
@@ -141,7 +141,7 @@
                                             lý công nghiệp</a>
                                     </div>
                                 </div>
-                                <hr>
+                                <hr style=" groove #919191; border-top: 3px groove #003366;">
                             </div>
                         </div>
                     </div>

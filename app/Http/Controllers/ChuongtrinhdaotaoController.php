@@ -47,6 +47,10 @@ class ChuongtrinhdaotaoController extends Controller
             $chuongtrinhdaotao->chuandaura= $request->chuandaura;
             $chuongtrinhdaotao->quydinhdaotao= $request->quydinhdaotao;
             $chuongtrinhdaotao->danhmucchuongtrinh= $request->danhmucchuongtrinh;
+            $chuongtrinhdaotao->daicuong= $request->daicuong;
+            $chuongtrinhdaotao->cosonganh= $request->cosonganh;
+            $chuongtrinhdaotao->kienthucbosung= $request->kienthucbosung;
+            $chuongtrinhdaotao->tuchon= $request->tuchon;
             $chuongtrinhdaotao->save();
             alert()->success('Đã thêm thành công!', 'Successfully');
         }
@@ -75,6 +79,10 @@ class ChuongtrinhdaotaoController extends Controller
         $chuongtrinhdaotao->chuandaura= $request->chuandaura;
         $chuongtrinhdaotao->quydinhdaotao= $request->quydinhdaotao;
         $chuongtrinhdaotao->danhmucchuongtrinh= $request->danhmucchuongtrinh;
+        $chuongtrinhdaotao->daicuong= $request->daicuong;
+        $chuongtrinhdaotao->cosonganh= $request->cosonganh;
+        $chuongtrinhdaotao->kienthucbosung= $request->kienthucbosung;
+        $chuongtrinhdaotao->tuchon= $request->tuchon;
         $chuongtrinhdaotao->save();
         alert()->success('Thành công', 'Đã sửa!');
         
@@ -98,9 +106,8 @@ class ChuongtrinhdaotaoController extends Controller
         $daotaodaihoc = daotaodaihocs::all();
         $chuongtrinhdaotao = chuongtrinhdaotaos::all();
         $chuandaura= chuongtrinhdaotaos::find($id);
-        $hihi = DB::table('chuongtrinhdaotaos')->join('hocphans','chuongtrinhdaotaos.id','=','hocphans.id_chuongtrinhdaotao')->get();
-        // dd($hihi);
-        return view('frontend.chuongtrinhdaotao.chuandaura',compact('chuandaura','chuongtrinhdaotao','daotaodaihoc','hihi'));
+
+        return view('frontend.chuongtrinhdaotao.chuandaura',compact('chuandaura','chuongtrinhdaotao','daotaodaihoc'));
     }
     public function quydinhdaotao($id)
     {

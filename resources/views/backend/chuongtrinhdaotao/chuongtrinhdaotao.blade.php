@@ -57,9 +57,12 @@
                                     <thead>
                                         <tr >
                                             <th>Tên chương trình</th>
-                                            <th>Chuẩn đầu ra</th>
-                                            <!-- <th>Quy định đào tạo</th> -->
-                                            <th style="width:60px">Danh mục chương trình</th>
+                                            <th>Chuẩn đầu ra</th> 
+                                            <th>Kế hoạch học tập chuẩn</th>
+                                            <th>Giáo dục đại cương</th>
+                                            <th>Cơ sở ngành</th>
+                                            <th>Kiến thức bổ sung</th>
+                                            <th>Tự chọn tự do</th>
                                             <th>Cập nhật ngày</th>
                                             <th></th>
                                             <th></th>
@@ -70,8 +73,11 @@
                                         <tr>
                                             <td>{{ $hh->tenchuongtrinh }}</td>
                                             <td >{{ substr($hh->chuandaura,0,50) }}</td>
-                                            <!-- <td>{{ $hh->quydinhdaotao}}</td> -->
-                                            <td>{{ $hh->danhmucchuongtrinh }}</td>
+                                            <td>{{ substr($hh->danhmucchuongtrinh,0,20) }}</td>
+                                            <td >{{ substr($hh->daicuong,0,50) }}</td>
+                                            <td >{{ substr($hh->cosonganh,0,50) }}</td>
+                                            <td >{{ substr($hh->kienthucbosung,0,50) }}</td>
+                                            <td >{{ substr($hh->tuchon,0,50) }}</td>
                                             <td>{{ $hh->updated_at }}</td>
                                             <td>
                                             <a href="suachuongtrinhdaotao/{{$hh->id}}" 

@@ -15,7 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
-    <link href="{{asset('index/css/accordion.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('index/css/accordion.css')}}" rel="stylesheet"> -->
 
 </head>
 
@@ -44,30 +44,122 @@
                         Xem kế hoạch học tập chuẩn <a style="color: #007bff;"
                             href="{!! $chuandaura->danhmucchuongtrinh !!}">tại đây</a>
                     </p>
-                    <p style="text-align: right;">
-                    <ul class="a-container">
-                        <!-- item01 -->
-                        @foreach($hihi as $item)
-                        <li class="a-items">
-                            <input type="radio" name="ac" id="{{$item->id_chuongtrinhdaotao}}" />
-                            <label for="{{$item->id_chuongtrinhdaotao}}">{!! $item->tenhocphan !!}</label>
-                            <div class="a-content">
-                                <h2>{!! $item->tenhocphan !!}</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam beatae maiores
-                                    possimus sequi
-                                    non quidem ad necessitatibus fugiat consectetur veritatis laboriosam ut soluta quis
-                                    deleniti
-                                    deserunt! Voluptate qui excepturi architecto.</p>
-                            </div>
-                        </li>
-                        @endforeach
-                    </ul>
-                    <!-- Post Content Column -->
-                    </p>
-                    <br><br><br><br><br><br><br><br>
                 </div>
-            </div>
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <!-- Post Content Column -->
+                            <div class="col-xs-3 col-sm-3">
+                                <!-- Button trigger modal -->
+                                <button type="button" style="color: black;"class="btn btn-primary" data-toggle="modal" data-target="#giaoducdaicuong">
+                                Giáo dục đại cương
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="giaoducdaicuong" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-centereds">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Giáo dục đại cương {!! $chuandaura->tenchuongtrinh !!}</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        {!! $chuandaura->daicuong !!} 
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                            <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3">
+                                <!-- Button trigger modal -->
+                                <button type="button" style="color: black;"class="btn btn-primary" data-toggle="modal" data-target="#cosonganh">
+                                Cơ sở ngành
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="cosonganh" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-centereds">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Cơ sở ngành {!! $chuandaura->tenchuongtrinh !!}</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        {!! $chuandaura->cosonganh !!}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                            <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3">
+                                <!-- Button trigger modal -->
+                                <button type="button" style="color: black;"class="btn btn-primary" data-toggle="modal" data-target="#bosung">
+                                Kiến thức bổ sung
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="bosung" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-centereds">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Kiến thức bổ sung {!! $chuandaura->tenchuongtrinh !!}</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        {!! $chuandaura->kienthucbosung !!}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                            <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3">
+                                <!-- Button trigger modal -->
+                                <button type="button" style="color: black;"class="btn btn-primary" data-toggle="modal" data-target="#tudo">
+                                Học phần tự chọn
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="tudo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-centereds">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Học phần tự chọn {!! $chuandaura->tenchuongtrinh !!}</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        {!! $chuandaura->tuchon !!}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                            <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br>
+                </div>
             @include('frontend.chuongtrinhdaotao.slidebarchuongtrinhdaotao')
+            </div>
         </div>
         <!-- /.row -->
     </div>
