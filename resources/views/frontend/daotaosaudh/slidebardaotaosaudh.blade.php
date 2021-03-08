@@ -25,7 +25,7 @@
                     </a>
                     <div class="dropdown-menu" style="font-size: 15px;" aria-labelledby="navbarDropdownMenuLink">
                         <a style="color: #000" class="dropdown-item" href="{{asset('dao-tao-thac-sy')}}">Giới thiệu
-                            chung</a>
+                            </a>
                         <a style="color: #000" class="dropdown-item" href="{{asset('chuan-dau-ra')}}">Chuẩn đầu ra của
                             chương trình</a>
                         <a style="color: #000" class="dropdown-item" href="{{asset('doi-tuong')}}">Đối tượng tuyển
@@ -47,7 +47,7 @@
                     </a>
                     <div class="dropdown-menu" style="font-size: 13px;" aria-labelledby="navbarDropdownMenuLink">
                         <a style="color: #000" class="dropdown-item" href="{{asset('dao-tao-tien-sy')}}">Giới thiệu
-                            chung</a>
+                            </a>
                         <a style="color: #000" class="dropdown-item" href="{{asset('kinh-te-hoc')}}">Chương trình tiến
                             sỹ Kinh tế học</a>
                         <a style="color: #000" class="dropdown-item" href="{{asset('dau-ra-kinh-te-hoc')}}">Chuẩn đầu ra

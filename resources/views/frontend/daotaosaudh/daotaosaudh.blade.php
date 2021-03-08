@@ -49,9 +49,9 @@
     <section class="page-section">
         <br><br>
         <div>
-            <div class="col-lg-12">
+            <!-- <div class="col-lg-12">
                 <h5 class="mt-4" style="color: #9c1010;">GIỚI THIỆU CHUNG</h5>
-            </div>
+            </div> -->
             <div style=" border-top: 3px groove #003366;">
                 <br><br>
                 <div class="cardz">
@@ -63,9 +63,9 @@
                             <div class="card-body">
                                 <p class="card-text" style="font-size: 13px; color:#000;"><b>ĐÀO TẠO SAU ĐẠI HỌC</b></p>
                                 <hr style=" border-top: 3px groove #003366;">
-                                <a href="{{asset('dao-tao-sau-dai-hoc')}}">
-                                    <p class="card-text" style="font-size: 13px; color:#003366;">Giới thiệu chung</p>
-                                </a>
+                                <!-- <a href="{{asset('dao-tao-sau-dai-hoc')}}">
+                                    <p class="card-text" style="font-size: 13px; color:#003366;">Giới thiệu</p>
+                                </a> -->
                                 <br>
                                 <a href="{{asset('danh-sach-luan-van')}}">
                                     <p class="card-text" style="font-size: 13px; color:#003366;">Danh sách luận văn cao
@@ -94,7 +94,7 @@
                                         aria-labelledby="navbarDropdownMenuLink">
                                         <a style="color: #000" class="dropdown-item"
                                             href="{{asset('dao-tao-thac-sy')}}">Giới thiệu
-                                            chung</a>
+                                           </a>
                                         <a style="color: #000" class="dropdown-item"
                                             href="{{asset('chuan-dau-ra')}}">Chuẩn đầu ra của
                                             chương trình</a>
@@ -124,7 +124,7 @@
                                         aria-labelledby="navbarDropdownMenuLink">
                                         <a style="color: #000" class="dropdown-item"
                                             href="{{asset('dao-tao-tien-sy')}}">Giới thiệu
-                                            chung</a>
+                                           </a>
                                         <a style="color: #000" class="dropdown-item"
                                             href="{{asset('kinh-te-hoc')}}">Chương trình tiến
                                             sỹ Kinh tế học</a>

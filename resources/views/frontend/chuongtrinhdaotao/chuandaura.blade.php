@@ -41,7 +41,7 @@
                 <div style="font-size: 13px;">
                     <p style="text-align: right;">
                         {!! $chuandaura->chuandaura !!}
-                        Xem danh mục học phần <a style="color: #007bff;"
+                        Xem kế hoạch học tập chuẩn <a style="color: #007bff;"
                             href="{!! $chuandaura->danhmucchuongtrinh !!}">tại đây</a>
                     </p>
                     <p style="text-align: right;">

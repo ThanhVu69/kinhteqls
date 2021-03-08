@@ -181,4 +181,9 @@ class AdminController extends Controller
         $loaitailieu = DB::table('loaitailieus')->where('id',$i)->first();
         return view('frontend.tailieu.tailieu',compact('loaitailieu','tailieu','loai'));
     }
+    // ban chap hanh
+    public function xembanchaphanh(){
+        $banchaphanh=DB::table('banchaphanhs')->get();
+        return view('frontend.sinhvien.banchaphanh',compact('banchaphanh'));
+    }
 }

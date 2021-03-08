@@ -220,9 +220,7 @@
                                             <div class="dropdown-item"><b>Sinh viên</b>
                                             </div>
                                             <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">BCH LIÊN CHI ĐOÀN</a>
-                                            <hr>
-                                            <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">BCH LIÊN CHI HỘI</a>
+                                            <a class="dropdown-item" href="{{asset('ban-chap-hanh')}}">BCH LIÊN CHI ĐOÀN - LIÊN CHI HỘI</a>
                                             <hr>
                                             <a class="dropdown-item" href="{{asset('dao-tao-sau-dai-hoc')}}">CÁC CÂU LẠC
                                                 BỘ</a>
