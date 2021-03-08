@@ -30,7 +30,7 @@ class BanchaphanhAddRequest extends FormRequest
             'txtBCHMail'  => 'required|unique:banchaphanhs,email|regex:^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})^',
             'txtBCHPhone'  => 'required|numeric|unique:banchaphanhs,sdt',
             'txtBCHClass'  => 'required',      
-            'txtBCHImage' => 'required|mimes:jpeg,bmp,png'
+            'txtBCHImage' => 'mimes:jpeg,bmp,png'
         ];
     }
 

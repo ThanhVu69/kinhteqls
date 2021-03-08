@@ -35,17 +35,17 @@ class BanchaphanhController extends Controller
     public function postAdd(BanchaphanhAddRequest $request)
     {
         $banchaphanh = new banchaphanhs;
-        $filename=$request->file('txtBCHImage')->getClientOriginalName();
-        $request->file('txtBCHImage')->move(
-            base_path() . '/public/upload/banchaphanh/', $filename
-        );
+        // $filename=$request->file('txtBCHImage')->getClientOriginalName();
+        // $request->file('txtBCHImage')->move(
+        //     base_path() . '/public/upload/banchaphanh/', $filename
+        // );
         $banchaphanh->hoten    = $request->txtBCHName;
         $banchaphanh->masosv   = $request->txtBCHCod;
         $banchaphanh->chucvu   = $request->txtBCHPos;
         $banchaphanh->email    = $request->txtBCHMail;
         $banchaphanh->sdt      = $request->txtBCHPhone;
         $banchaphanh->lop      = $request->txtBCHClass;
-        $banchaphanh->anh      = $filename;
+        // $banchaphanh->anh      = $filename;
         $banchaphanh->save();
         alert()->success('Thêm thành viên ban chấp hành thành công.','Thông báo');
         return redirect()->route('admin.banchaphanh.list');
@@ -77,15 +77,15 @@ class BanchaphanhController extends Controller
         $banchaphanh->sdt      = Request::input('txtBCHPhone');
         $banchaphanh->lop      = Request::input('txtBCHClass');
 
-        $img_current = 'public/upload/banchaphanh/'.Request::input('fImageCurrent');
-        if (!empty(Request::file('fImage'))) {
-             $filename=Request::file('fImage')->getClientOriginalName();
-             $banchaphanh->anh = $filename;
-             Request::file('fImage')->move(base_path() . '/public/upload/banchaphanh/', $filename);
-             File::delete($img_current);
-        } else {
-            echo "File empty";
-        }
+        // $img_current = 'public/upload/banchaphanh/'.Request::input('fImageCurrent');
+        // if (!empty(Request::file('fImage'))) {
+        //      $filename=Request::file('fImage')->getClientOriginalName();
+        //      $banchaphanh->anh = $filename;
+        //      Request::file('fImage')->move(base_path() . '/public/upload/banchaphanh/', $filename);
+        //      File::delete($img_current);
+        // } else {
+        //     echo "File empty";
+        // }
 
         $banchaphanh->save();
         alert()->success('Sửa thành viên ban chấp hành thành công.','Thông báo');

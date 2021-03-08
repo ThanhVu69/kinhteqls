@@ -198,10 +198,30 @@
                     </li>
                     <li class="nav-item">
                         <div class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown">
                                 Hợp tác
                             </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-image: url('index/assets/img/white.jpg'); background-size: cover;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="dropdown-item"><b>Hợp tác</b>
+                                            </div>
+                                            <hr>
+                                            <a class="dropdown-item" href="#">Tổ chức khoa học</a>
+                                            <hr>
+                                            <a class="dropdown-item" href="#">Doanh nghiệp</a>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <img src="{{asset('index/assets/img/Home-Study-Health-Tips-1.jpg')}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li class="nav-item">

@@ -69,7 +69,7 @@
                                     @foreach($chuongtrinhdaotao as $hh)
                                         <tr>
                                             <td>{{ $hh->tenchuongtrinh }}</td>
-                                            <td >{{ $hh->chuandaura }}</td>
+                                            <td >{{ substr($hh->chuandaura,0,50) }}</td>
                                             <!-- <td>{{ $hh->quydinhdaotao}}</td> -->
                                             <td>{{ $hh->danhmucchuongtrinh }}</td>
                                             <td>{{ $hh->updated_at }}</td>
