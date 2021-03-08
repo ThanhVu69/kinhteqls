@@ -225,7 +225,7 @@ Route::group(['prefix' => 'hocphan'], function() {
     Route::get('sua/{id}',['as'=>'admin.hocphan.getEdit','uses'=>'HocphanController@getEdit']);
     Route::post('sua/{id}',['as'=>'admin.hocphan.postEdit','uses'=>'HocphanController@postEdit']);
 });
-//Ban chấp hàng
+//Ban chấp hành
 Route::group(['prefix' => 'banchaphanh'], function() {
     Route::get('danhsach',['as'=>'admin.banchaphanh.list','uses'=>'BanchaphanhController@getList']);
     Route::get('them',['as'=>'admin.banchaphanh.getAdd','uses'=>'BanchaphanhController@getAdd']);
@@ -234,7 +234,7 @@ Route::group(['prefix' => 'banchaphanh'], function() {
     Route::get('sua/{id}',['as'=>'admin.banchaphanh.getEdit','uses'=>'BanchaphanhController@getEdit']);
     Route::post('sua/{id}',['as'=>'admin.banchaphanh.postEdit','uses'=>'BanchaphanhController@postEdit']);
 });
-
+Route::get('ban-chap-hanh','AdminController@xembanchaphanh');
 // tài liệu web
 Route::get('tai-lieu','AdminController@tlweb');
 Route::get('tai-lieu/{url}','AdminController@xemtlloai');

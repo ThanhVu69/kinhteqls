@@ -22,7 +22,6 @@ class BanchaphanhController extends Controller
     //
     public function getList()
     {
-
         $banchaphanh = DB::table('banchaphanhs')->get();
     	return view('backend.banchaphanh.danhsach',compact('banchaphanh'));
     }
@@ -91,4 +90,5 @@ class BanchaphanhController extends Controller
         alert()->success('Sửa thành viên ban chấp hành thành công.','Thông báo');
         return redirect()->route('admin.banchaphanh.list');
     }
+
 }
