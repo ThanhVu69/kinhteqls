@@ -15,21 +15,35 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
-
+    <style>
+    img.cangiua {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
 </head>
 
 <body>
     @include('frontend.header')
     <!-- Page Content -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="width:1500px; height:auto;" src="{{asset('index/assets/img/caybang.jpg')}}"
+                     class="cangiua" alt="...">
+            </div>
+        </div>
+    </div><br><br><br>
     <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img style="width:auto; height:auto;" src="{{asset('index/assets/img/dai-hoc-bach-khoa.jpg')}}"
+                    <img style="width:1200px; height:auto;" src="{{asset('index/assets/img/caybang.jpg')}}"
                         class="d-block w-1" alt="...">
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <!-- Post Content Column -->
             <div class="col-lg-8">
@@ -37,12 +51,13 @@
                 <!-- <h5 class="mt-4" style="color: #9c1010;">CHUẨN ĐẦU RA</h5>
                 <hr> -->
                 <div style="font-size: 13px;">
-                <p style="text-align: right;">
-                @foreach($daotaodaihoc as $dt)
-                {!! $dt->gioithieuchung !!}<br><br><br><br><br><br><br><br>
-                @endforeach
-                </p>
-            </div></div>
+                    <p style="text-align: right;">
+                        @foreach($daotaodaihoc as $dt)
+                        {!! $dt->gioithieuchung !!}<br><br><br><br><br><br><br><br>
+                        @endforeach
+                    </p>
+                </div>
+            </div>
             @include('frontend.daotaodaihoc.slidebardaotaodaihoc')
         </div>
         <!-- /.row -->
