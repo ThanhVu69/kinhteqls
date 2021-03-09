@@ -6,7 +6,7 @@
             <div class="card-header">
                 <b>ĐÀO TẠO ĐẠI HỌC</b>
             </div>
-            <ul class="list-group list-group-flush" style=" border-top: 3px groove #003366;">
+            <ul class="list-group list-group-flush" style=" background: #efefef;border-top: 3px groove #003366;">
                 <!-- <li class="list-group-item"><a style="color: #000" href="{{asset('gioi-thieu-chung1')}}">Giới
                         thiệu chung</a></li> -->
                 @foreach($daotaodaihoc as $dt)
