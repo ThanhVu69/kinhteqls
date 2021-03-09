@@ -17,7 +17,7 @@
 
                 @foreach($chuongtrinhdaotao as $ct)
                 <div class="dropdown" style="font-size: 13px;">
-                    <a style="color: #000" style="font-size: 13px;" class="nav-link "
+                    <a style="color: #000" style="font-size: 13px; " class="nav-link "
                         href="{{asset('chuan-dau-ra')}}/{{$ct->id}}" aria-expanded="false">
                         {{$ct->tenchuongtrinh}}
                     </a>
