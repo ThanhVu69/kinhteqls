@@ -123,7 +123,7 @@
                                         <a class="dropdown-item" href="https://www.hust.edu.vn/tuyen-sinh-nghien-cuu-sinh">Nghiên cứu sinh</a>
                                     </div>
                                     <div class="col-sm-6">
-                                        <img src="{{asset('index/assets/img/levels-of-study-jpeg.jpg')}}">
+                                        <img src="{{asset('index/assets/img/s6.jpg')}}">
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
                                             <a class="dropdown-item" href="#">Doanh nghiệp</a>
                                         </div>
                                         <div class="col-sm-5">
-                                            <img src="{{asset('index/assets/img/Home-Study-Health-Tips-1.jpg')}}">
+                                            <img src="{{asset('index/assets/img/ht.png')}}">
                                         </div>
                                     </div>
                                 </div>
@@ -277,7 +277,7 @@
                                             <hr>
                                         </div>
                                         <div class="col-sm-5">
-                                            <img src="{{asset('index/assets/img/c424c6f61fa2effcb6b3.jpg')}}">
+                                            <img src="{{asset('index/assets/img/teamw.jpg')}}">
                                         </div>
                                     </div>
                                 </div>

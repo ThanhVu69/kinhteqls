@@ -15,16 +15,14 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
-    <style>
-    img.cangiua {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    </style>
+    <!-- Căn giữa ảnh đầu trang -->
+    <link href="{{asset('trangphu/css/anh.css')}}" rel="stylesheet">
+    <!-- Căn giữa ảnh đầu trang -->
+    <link href="{{asset('trangphu/css/anh.css')}}" rel="stylesheet">
+    
 </head>
 
-<body>
+<body class="body">
     @include('frontend.header')
     <!-- Page Content -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -44,7 +42,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="row">
+        <div class="row" >
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->

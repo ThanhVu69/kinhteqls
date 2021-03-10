@@ -4,10 +4,10 @@
     <div class="card my-4" style="font-size: 15px;">
         <div class="card" style="width: 21.5rem;">
             <div class="card-header">
-               ĐÀO TẠO SAU ĐẠI HỌC
+               <b>ĐÀO TẠO SAU ĐẠI HỌC</b>
             </div>
-            <ul class="list-group list-group-flush" style=" border-top: 3px groove #003366;">
-                <li class="list-group-item"><a style="color: #000" href="{{asset('dao-tao-sau-dai-hoc')}}">Đào tạo sau
+            <ul class="list-group list-group-flush" style=" background: #efefef;border-top: 3px groove #003366;"><br>
+                <!-- <li class="list-group-item"><a style="color: #000" href="{{asset('dao-tao-sau-dai-hoc')}}">Đào tạo sau
                         đại học</a></li>
                 <li class="list-group-item"><a style="color: #000" href="{{asset('danh-sach-luan-van')}}">Danh sách luận
                         văn cao học các
@@ -17,7 +17,7 @@
                         và Đề tài nghiên cứu</a></li>
                 <li class="list-group-item"><a style="color: #000" href="{{asset('danh-sach-tap-chi')}}">Danh sách tạp
                         chí/ Hội nghị khoa
-                        học</a></li>
+                        học</a></li> -->
                 <div class="dropdown">
                     <a style="color: #000" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,6 +39,7 @@
                         <a style="color: #000" class="dropdown-item" href="{{asset('danh-sach-giang-vien')}}">Danh sách
                             giảng viên</a>
                     </div>
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
                 </div>
                 <div class="dropdown">
                     <a style="color: #000" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -59,11 +60,11 @@
                             href="{{asset('dau-ra-quan-ly-cong-nghiep')}}">Chuẩn đầu ra của Chương trình tiến sỹ Quản
                             lý công nghiệp</a>
                     </div>
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
                 </div>
 
             </ul>
         </div>
     </div>
-    <hr>
     
 </div>

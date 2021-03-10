@@ -8,9 +8,12 @@
             <div class="card-header">
                 <b>BỘ MÔN - TRUNG TÂM</b>
             </div>
-            <ul class="list-group list-group-flush" style=" border-top: 3px groove #003366;">
-                <li class="list-group-item"><a style="color: #000; font-size:15px" href="{{asset('bo-mon-trung-tam')}}">Giới
-                        thiệu</a></li>
+            <ul class="list-group list-group-flush" style="background: #efefef; border-top: 3px groove #003366;"><br>
+                <div class="dropdown" style="font-size: 13px;">
+                    <a class="nav-link" style="color: #000; font-size:14px" href="{{asset('bo-mon-trung-tam')}}">Giới
+                        thiệu</a>
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
+                </div>
                 @foreach($bomon as $ct)
                 <div class="dropdown">
                     <a style="color: #000" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -41,12 +44,12 @@
                             href="{{asset('sach-da-xuat-ban')}}/{{$ct->id}}">Sách đã
                             xuất bản</a> -->
                     </div>
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
                 </div>
                 @endforeach
             </ul>
         </div>
     </div>
-    <hr><br><br><br><br><br><br>
     <!-- <img class="img-fluid rounded" src="{{asset('index/assets/img/bk8.jpg')}}" alt=""> -->
     <!-- Side Widget -->
     <!-- <div class="card my-4" style="font-size: 13px;">

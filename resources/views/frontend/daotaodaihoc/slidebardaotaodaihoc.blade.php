@@ -6,15 +6,16 @@
             <div class="card-header">
                 <b>ĐÀO TẠO ĐẠI HỌC</b>
             </div>
-            <ul class="list-group list-group-flush" style=" background: #efefef;border-top: 3px groove #003366;">
+            <ul class="list-group list-group-flush" style=" background: #efefef;border-top: 3px groove #003366;"><br>
                 <!-- <li class="list-group-item"><a style="color: #000" href="{{asset('gioi-thieu-chung1')}}">Giới
                         thiệu chung</a></li> -->
                 @foreach($daotaodaihoc as $dt)
-                <li class="list-group-item"><a style="color: #000; font-size: 13px;" href="{{$dt->bieudokehoach}}">Biểu
+                <div class="dropdown" style="font-size: 13px;">
+                    <a style="color: #000; font-size: 13px;" href="{{$dt->bieudokehoach}}" class="nav-link ">Biểu
                         đồ kế hoạch</a>
-                </li>
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
+                </div>
                 @endforeach
-
                 @foreach($chuongtrinhdaotao as $ct)
                 <div class="dropdown" style="font-size: 13px;">
                     <a style="color: #000" style="font-size: 13px; " class="nav-link "
@@ -29,6 +30,7 @@
                         <a style="color: #000" class="dropdown-item" href="{{$ct->danhmucchuongtrinh}}">Danh mục chương
                             trình</a>
                     </div> -->
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
                 </div>
                 @endforeach
             </ul>

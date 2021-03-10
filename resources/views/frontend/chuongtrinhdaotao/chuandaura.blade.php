@@ -16,6 +16,8 @@
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
     <!-- <link href="{{asset('index/css/accordion.css')}}" rel="stylesheet"> -->
+    <!-- Căn giữa ảnh đầu trang -->
+    <link href="{{asset('trangphu/css/anh.css')}}" rel="stylesheet">
 
 </head>
 
@@ -37,7 +39,6 @@
                 <!-- Title -->
                 <!-- <h5 class="mt-4" style="color: #9c1010;">{{ $chuandaura->tenchuongtrinh }}</h5> -->
                 <!-- <small>{{ $chuandaura->tenchuongtrinh }}</small> -->
-                <hr style=" groove #919191; border-top: 3px groove #003366;">
                 <div style="font-size: 13px;">
                     <p style="text-align: right;">
                         {!! $chuandaura->chuandaura !!}

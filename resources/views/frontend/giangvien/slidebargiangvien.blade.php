@@ -6,9 +6,11 @@
             <div class="card-header">
                 <b>BỘ MÔN - TRUNG TÂM</b>
             </div>
-            <ul class="list-group list-group-flush" style=" border-top: 3px groove #003366;">
-                <li class="list-group-item"><a style="color: #000; font-size: 15px;"
-                        href="{{asset('bo-mon-trung-tam')}}">Giới thiệu</a></li>
+            <ul class="list-group list-group-flush" style=" background: #efefef; border-top: 3px groove #003366;"><br>
+                <div class="dropdown" style="font-size: 13px;">
+                    <a style="color: #000; font-size: 15px;" href="{{asset('bo-mon-trung-tam')}}">Giới thiệu</a>
+                </div>
+                <hr style=" groove #919191; border-top: 1px groove #003366;">
                 @foreach($bmon as $ct)
                 <div class="dropdown">
                     <a style="color: #000" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -44,5 +46,5 @@
             </ul>
         </div>
         <br>
-        
+
     </div>

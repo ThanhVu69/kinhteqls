@@ -16,6 +16,8 @@
     <!-- Custom styles for this template -->
     <link href="{{asset('trangphu/css/blog-post.css')}}" rel="stylesheet">
     <link href="{{asset('index/css/accordion.css')}}" rel="stylesheet">
+    <!-- Căn giữa ảnh đầu trang -->
+    <link href="{{asset('trangphu/css/anh.css')}}" rel="stylesheet">
 
 </head>
 

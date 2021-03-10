@@ -1,0 +1,12 @@
+img.cangiua {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.body{
+    /* background-color: #f8f8f8; */
+    background-image: url('/index/assets/img/1.jpg');
+}
+.row{
+    background-color: #fdfdfd;
+}
