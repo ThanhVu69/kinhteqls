@@ -20,12 +20,9 @@ Route::get('trang-quan-ly', 'AdminController@homead',function(){
 })->middleware('adminLogin');
 
 //Giới thiệu chung về viện
-Route::get('thu-ngo', 'AdminController@thungo',function(){
-})->middleware('adminLogin');
-Route::get('lich-su-hinh-thanh', 'AdminController@lichsu',function(){
-})->middleware('adminLogin');
-Route::get('co-cau-to-chuc', 'AdminController@cocau',function(){
-})->middleware('adminLogin');
+Route::get('thu-ngo', 'AdminController@thungo');
+Route::get('lich-su-hinh-thanh', 'AdminController@lichsu');
+Route::get('co-cau-to-chuc', 'AdminController@cocau');
 Route::get('gioithieu', 'AdminController@gioithieu',function(){
 })->middleware('adminLogin');
 Route::get('suagioithieu/{id}','AdminController@getsuagioithieu',function(){

@@ -18,18 +18,18 @@
 
 </head>
 
-<body>
+<body class="body">
     @include('frontend.header')
-    <!-- Page Content -->
-    <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img style="width:auto; height:auto;" src="{{asset('index/assets/img/dai-hoc-bach-khoa.jpg')}}"
-                        class="d-block w-1" alt="...">
-                </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="width:1500px; height:auto;" src="{{asset('index/assets/img/caybang1.jpg')}}"
+                     class="cangiua" alt="...">
             </div>
         </div>
+    </div><br><br><br>
+    <!-- Page Content -->
+    <div class="container">
         <div class="row">
             <!-- Post Content Column -->
             <div class="col-lg-8">

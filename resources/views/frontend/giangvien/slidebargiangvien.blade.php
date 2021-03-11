@@ -8,9 +8,9 @@
             </div>
             <ul class="list-group list-group-flush" style=" background: #efefef; border-top: 3px groove #003366;"><br>
                 <div class="dropdown" style="font-size: 13px;">
-                    <a style="color: #000; font-size: 15px;" href="{{asset('bo-mon-trung-tam')}}">Giới thiệu</a>
+                    <a class="nav-link " style="color: #000; font-size: 15px;" href="{{asset('bo-mon-trung-tam')}}">Giới thiệu</a>
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
                 </div>
-                <hr style=" groove #919191; border-top: 1px groove #003366;">
                 @foreach($bmon as $ct)
                 <div class="dropdown">
                     <a style="color: #000" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -41,6 +41,7 @@
                             href="{{asset('sach-da-xuat-ban')}}/{{$ct->id}}">Sách đã
                             xuất bản</a> -->
                     </div>
+                    <hr style=" groove #919191; border-top: 1px groove #003366;">
                 </div>
                 @endforeach
             </ul>
