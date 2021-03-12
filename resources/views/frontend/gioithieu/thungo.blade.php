@@ -25,8 +25,8 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img style="width:1500px; height:auto;" src="{{asset('index/assets/img/caybang2.jpg')}}"
-                     class="cangiua" alt="...">
+                <img style="width:1500px; height:auto;" src="{{asset('index/assets/img/caybang2.jpg')}}" class="cangiua"
+                    alt="...">
             </div>
         </div>
     </div><br><br><br>
@@ -34,12 +34,14 @@
     <div class="container">
         <div class="row">
             <!-- Post Content Column -->
-            <div class="col-lg-8">
+            <div class="col-xs-8 col-sm-8">
                 <!-- Title -->
-                <h5 class="mt-4" style="color: #9c1010;">THƯ NGỎ</h5>
-                <hr>
-                <div style="font-size: 13px;">
-                    <p style="text-align: right;">
+                <div class="title">
+                    THƯ NGỎ
+                </div>
+                <hr style=" groove #919191; border-top: 1px groove #003366;">
+                <div>
+                    <p>
                         @foreach($gioithieu as $gt)
                         {!! $gt->thungo !!}
                         @endforeach<br><br><br><br><br><br><br><br>

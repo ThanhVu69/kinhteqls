@@ -36,8 +36,10 @@
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->
-                <h5 class="mt-4" style="color: #9c1010;">LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN</h5>
-                <hr>
+                <div class="title">
+                LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN
+                </div>
+                <hr style=" groove #919191; border-top: 1px groove #003366;">
                 <div style="font-size: 13px;">
                     <p style="text-align: right;">
                         @foreach($gioithieu as $gt)

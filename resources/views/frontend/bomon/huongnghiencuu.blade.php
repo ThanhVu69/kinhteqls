@@ -36,9 +36,11 @@
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->
-                <h5 class="mt-4" style="color: #9c1010;">CÁC HƯỚNG NGHIÊN CỨU</h5>
-                <small>{{ $huongnghiencuu->tenbomon }}</small>
-                <hr>
+                <div class="title">
+                    CÁC HƯỚNG NGHIÊN CỨU
+                </div>
+                <div class="mucnho">Bộ môn {{ $huongnghiencuu->tenbomon }}</div>
+                <hr style=" groove #919191; border-top: 1px groove #003366;">
                 <div style="font-size: 13px;">
                     <p style="text-align: right;">
                         {!! $huongnghiencuu->huongnghiencuu !!}<br><br><br><br><br><br><br><br>

@@ -37,10 +37,13 @@
             <!-- Post Content Column -->
             <div class="col-lg-8">
                 <!-- Title -->
+                <!-- <div class="title"> -->
                 <!-- <h5 class="mt-4" style="color: #9c1010;">{{ $chuandaura->tenchuongtrinh }}</h5> -->
                 <!-- <small>{{ $chuandaura->tenchuongtrinh }}</small> -->
-                <div style="font-size: 13px;">
-                    <p style="text-align: right;">
+                <!-- </div>
+                <hr style=" groove #919191; border-top: 1px groove #003366;"> -->
+                <div>
+                    <p>
                         {!! $chuandaura->chuandaura !!}
                         Xem kế hoạch học tập chuẩn <a style="color: #007bff;"
                             href="{!! $chuandaura->danhmucchuongtrinh !!}">tại đây</a>
